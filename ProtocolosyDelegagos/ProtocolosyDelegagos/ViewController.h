@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FileDownload.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <FileDownloadDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *urlText;
+@property (strong, nonatomic) IBOutlet UITextField *fileText;
 
+- (IBAction)downloadFileButton:(id)sender;
+@property (strong, nonatomic) IBOutlet UIProgressView *progressView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
