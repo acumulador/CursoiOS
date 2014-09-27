@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		757CD3B119CA4D6C00AB077D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757CD3B019CA4D6C00AB077D /* Foundation.framework */; };
+		757CD3B319CA4D6C00AB077D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757CD3B219CA4D6C00AB077D /* CoreGraphics.framework */; };
+		757CD3B519CA4D6C00AB077D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757CD3B419CA4D6C00AB077D /* UIKit.framework */; };
+		757CD3BB19CA4D6C00AB077D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757CD3B919CA4D6C00AB077D /* InfoPlist.strings */; };
+		757CD3BD19CA4D6C00AB077D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD3BC19CA4D6C00AB077D /* main.m */; };
+		757CD3C119CA4D6C00AB077D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD3C019CA4D6C00AB077D /* AppDelegate.m */; };
+		757CD3C419CA4D6C00AB077D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757CD3C219CA4D6C00AB077D /* Main.storyboard */; };
+		757CD3C719CA4D6C00AB077D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD3C619CA4D6C00AB077D /* ViewController.m */; };
+		757CD3C919CA4D6C00AB077D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757CD3C819CA4D6C00AB077D /* Images.xcassets */; };
+		757CD3D019CA4D6C00AB077D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757CD3CF19CA4D6C00AB077D /* XCTest.framework */; };
+		757CD3D119CA4D6C00AB077D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757CD3B019CA4D6C00AB077D /* Foundation.framework */; };
+		757CD3D219CA4D6C00AB077D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757CD3B419CA4D6C00AB077D /* UIKit.framework */; };
+		757CD3DA19CA4D6C00AB077D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757CD3D819CA4D6C00AB077D /* InfoPlist.strings */; };
+		757CD3DC19CA4D6C00AB077D /* Valida_EdadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD3DB19CA4D6C00AB077D /* Valida_EdadTests.m */; };
+		757CD3EC19CA540300AB077D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 757CD3EB19CA540300AB077D /* Person.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		757CD3D319CA4D6C00AB077D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 757CD3A519CA4D6C00AB077D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 757CD3AC19CA4D6C00AB077D;
+			remoteInfo = "Valida Edad";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		757CD3AD19CA4D6C00AB077D /* Valida Edad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Valida Edad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757CD3B019CA4D6C00AB077D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		757CD3B219CA4D6C00AB077D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		757CD3B419CA4D6C00AB077D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		757CD3B819CA4D6C00AB077D /* Valida Edad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Valida Edad-Info.plist"; sourceTree = "<group>"; };
+		757CD3BA19CA4D6C00AB077D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		757CD3BC19CA4D6C00AB077D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		757CD3BE19CA4D6C00AB077D /* Valida Edad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Valida Edad-Prefix.pch"; sourceTree = "<group>"; };
+		757CD3BF19CA4D6C00AB077D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		757CD3C019CA4D6C00AB077D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		757CD3C319CA4D6C00AB077D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		757CD3C519CA4D6C00AB077D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		757CD3C619CA4D6C00AB077D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		757CD3C819CA4D6C00AB077D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		757CD3CE19CA4D6C00AB077D /* Valida EdadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Valida EdadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757CD3CF19CA4D6C00AB077D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		757CD3D719CA4D6C00AB077D /* Valida EdadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Valida EdadTests-Info.plist"; sourceTree = "<group>"; };
+		757CD3D919CA4D6C00AB077D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		757CD3DB19CA4D6C00AB077D /* Valida_EdadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Valida_EdadTests.m; sourceTree = "<group>"; };
+		757CD3EA19CA540300AB077D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		757CD3EB19CA540300AB077D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		757CD3AA19CA4D6C00AB077D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757CD3B319CA4D6C00AB077D /* CoreGraphics.framework in Frameworks */,
+				757CD3B519CA4D6C00AB077D /* UIKit.framework in Frameworks */,
+				757CD3B119CA4D6C00AB077D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757CD3CB19CA4D6C00AB077D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757CD3D019CA4D6C00AB077D /* XCTest.framework in Frameworks */,
+				757CD3D219CA4D6C00AB077D /* UIKit.framework in Frameworks */,
+				757CD3D119CA4D6C00AB077D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		757CD3A419CA4D6C00AB077D = {
+			isa = PBXGroup;
+			children = (
+				757CD3B619CA4D6C00AB077D /* Valida Edad */,
+				757CD3D519CA4D6C00AB077D /* Valida EdadTests */,
+				757CD3AF19CA4D6C00AB077D /* Frameworks */,
+				757CD3AE19CA4D6C00AB077D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		757CD3AE19CA4D6C00AB077D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				757CD3AD19CA4D6C00AB077D /* Valida Edad.app */,
+				757CD3CE19CA4D6C00AB077D /* Valida EdadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		757CD3AF19CA4D6C00AB077D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				757CD3B019CA4D6C00AB077D /* Foundation.framework */,
+				757CD3B219CA4D6C00AB077D /* CoreGraphics.framework */,
+				757CD3B419CA4D6C00AB077D /* UIKit.framework */,
+				757CD3CF19CA4D6C00AB077D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		757CD3B619CA4D6C00AB077D /* Valida Edad */ = {
+			isa = PBXGroup;
+			children = (
+				757CD3E919CA53CF00AB077D /* class */,
+				757CD3BF19CA4D6C00AB077D /* AppDelegate.h */,
+				757CD3C019CA4D6C00AB077D /* AppDelegate.m */,
+				757CD3C219CA4D6C00AB077D /* Main.storyboard */,
+				757CD3C519CA4D6C00AB077D /* ViewController.h */,
+				757CD3C619CA4D6C00AB077D /* ViewController.m */,
+				757CD3C819CA4D6C00AB077D /* Images.xcassets */,
+				757CD3B719CA4D6C00AB077D /* Supporting Files */,
+			);
+			path = "Valida Edad";
+			sourceTree = "<group>";
+		};
+		757CD3B719CA4D6C00AB077D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				757CD3B819CA4D6C00AB077D /* Valida Edad-Info.plist */,
+				757CD3B919CA4D6C00AB077D /* InfoPlist.strings */,
+				757CD3BC19CA4D6C00AB077D /* main.m */,
+				757CD3BE19CA4D6C00AB077D /* Valida Edad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		757CD3D519CA4D6C00AB077D /* Valida EdadTests */ = {
+			isa = PBXGroup;
+			children = (
+				757CD3DB19CA4D6C00AB077D /* Valida_EdadTests.m */,
+				757CD3D619CA4D6C00AB077D /* Supporting Files */,
+			);
+			path = "Valida EdadTests";
+			sourceTree = "<group>";
+		};
+		757CD3D619CA4D6C00AB077D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				757CD3D719CA4D6C00AB077D /* Valida EdadTests-Info.plist */,
+				757CD3D819CA4D6C00AB077D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		757CD3E919CA53CF00AB077D /* class */ = {
+			isa = PBXGroup;
+			children = (
+				757CD3EA19CA540300AB077D /* Person.h */,
+				757CD3EB19CA540300AB077D /* Person.m */,
+			);
+			name = class;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		757CD3AC19CA4D6C00AB077D /* Valida Edad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757CD3DF19CA4D6C00AB077D /* Build configuration list for PBXNativeTarget "Valida Edad" */;
+			buildPhases = (
+				757CD3A919CA4D6C00AB077D /* Sources */,
+				757CD3AA19CA4D6C00AB077D /* Frameworks */,
+				757CD3AB19CA4D6C00AB077D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Valida Edad";
+			productName = "Valida Edad";
+			productReference = 757CD3AD19CA4D6C00AB077D /* Valida Edad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		757CD3CD19CA4D6C00AB077D /* Valida EdadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757CD3E219CA4D6C00AB077D /* Build configuration list for PBXNativeTarget "Valida EdadTests" */;
+			buildPhases = (
+				757CD3CA19CA4D6C00AB077D /* Sources */,
+				757CD3CB19CA4D6C00AB077D /* Frameworks */,
+				757CD3CC19CA4D6C00AB077D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				757CD3D419CA4D6C00AB077D /* PBXTargetDependency */,
+			);
+			name = "Valida EdadTests";
+			productName = "Valida EdadTests";
+			productReference = 757CD3CE19CA4D6C00AB077D /* Valida EdadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		757CD3A519CA4D6C00AB077D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Juan C Salazar";
+				TargetAttributes = {
+					757CD3CD19CA4D6C00AB077D = {
+						TestTargetID = 757CD3AC19CA4D6C00AB077D;
+					};
+				};
+			};
+			buildConfigurationList = 757CD3A819CA4D6C00AB077D /* Build configuration list for PBXProject "Valida Edad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 757CD3A419CA4D6C00AB077D;
+			productRefGroup = 757CD3AE19CA4D6C00AB077D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				757CD3AC19CA4D6C00AB077D /* Valida Edad */,
+				757CD3CD19CA4D6C00AB077D /* Valida EdadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		757CD3AB19CA4D6C00AB077D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757CD3C919CA4D6C00AB077D /* Images.xcassets in Resources */,
+				757CD3BB19CA4D6C00AB077D /* InfoPlist.strings in Resources */,
+				757CD3C419CA4D6C00AB077D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757CD3CC19CA4D6C00AB077D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757CD3DA19CA4D6C00AB077D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		757CD3A919CA4D6C00AB077D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757CD3C719CA4D6C00AB077D /* ViewController.m in Sources */,
+				757CD3C119CA4D6C00AB077D /* AppDelegate.m in Sources */,
+				757CD3EC19CA540300AB077D /* Person.m in Sources */,
+				757CD3BD19CA4D6C00AB077D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757CD3CA19CA4D6C00AB077D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757CD3DC19CA4D6C00AB077D /* Valida_EdadTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		757CD3D419CA4D6C00AB077D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 757CD3AC19CA4D6C00AB077D /* Valida Edad */;
+			targetProxy = 757CD3D319CA4D6C00AB077D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		757CD3B919CA4D6C00AB077D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757CD3BA19CA4D6C00AB077D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		757CD3C219CA4D6C00AB077D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757CD3C319CA4D6C00AB077D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		757CD3D819CA4D6C00AB077D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757CD3D919CA4D6C00AB077D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		757CD3DD19CA4D6C00AB077D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		757CD3DE19CA4D6C00AB077D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		757CD3E019CA4D6C00AB077D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Valida Edad/Valida Edad-Prefix.pch";
+				INFOPLIST_FILE = "Valida Edad/Valida Edad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		757CD3E119CA4D6C00AB077D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Valida Edad/Valida Edad-Prefix.pch";
+				INFOPLIST_FILE = "Valida Edad/Valida Edad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		757CD3E319CA4D6C00AB077D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Valida Edad.app/Valida Edad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Valida Edad/Valida Edad-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Valida EdadTests/Valida EdadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		757CD3E419CA4D6C00AB077D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Valida Edad.app/Valida Edad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Valida Edad/Valida Edad-Prefix.pch";
+				INFOPLIST_FILE = "Valida EdadTests/Valida EdadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		757CD3A819CA4D6C00AB077D /* Build configuration list for PBXProject "Valida Edad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757CD3DD19CA4D6C00AB077D /* Debug */,
+				757CD3DE19CA4D6C00AB077D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		757CD3DF19CA4D6C00AB077D /* Build configuration list for PBXNativeTarget "Valida Edad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757CD3E019CA4D6C00AB077D /* Debug */,
+				757CD3E119CA4D6C00AB077D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		757CD3E219CA4D6C00AB077D /* Build configuration list for PBXNativeTarget "Valida EdadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757CD3E319CA4D6C00AB077D /* Debug */,
+				757CD3E419CA4D6C00AB077D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 757CD3A519CA4D6C00AB077D /* Project object */;
+}
