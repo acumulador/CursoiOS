@@ -14,6 +14,10 @@
 		75D9A4AB19DA138500BAAF6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D9A4AA19DA138500BAAF6B /* Images.xcassets */; };
 		75D9A4AE19DA138500BAAF6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75D9A4AC19DA138500BAAF6B /* LaunchScreen.xib */; };
 		75D9A4BA19DA138500BAAF6B /* Convertidor_DolaresTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D9A4B919DA138500BAAF6B /* Convertidor_DolaresTests.m */; };
+		75D9A4C519DA1AA500BAAF6B /* ConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D9A4C419DA1AA500BAAF6B /* ConverterViewController.m */; };
+		75D9A4C819DA1ACB00BAAF6B /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D9A4C719DA1ACB00BAAF6B /* ConfigViewController.m */; };
+		75D9A4CC19DA1B0100BAAF6B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D9A4CB19DA1B0100BAAF6B /* User.m */; };
+		75D9A4CF19DA1B1200BAAF6B /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D9A4CE19DA1B1200BAAF6B /* Converter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,15 @@
 		75D9A4B319DA138500BAAF6B /* Convertidor DolaresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Convertidor DolaresTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D9A4B819DA138500BAAF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75D9A4B919DA138500BAAF6B /* Convertidor_DolaresTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Convertidor_DolaresTests.m; sourceTree = "<group>"; };
+		75D9A4C319DA1AA500BAAF6B /* ConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConverterViewController.h; sourceTree = "<group>"; };
+		75D9A4C419DA1AA500BAAF6B /* ConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverterViewController.m; sourceTree = "<group>"; };
+		75D9A4C619DA1ACB00BAAF6B /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		75D9A4C719DA1ACB00BAAF6B /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		75D9A4CA19DA1B0100BAAF6B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		75D9A4CB19DA1B0100BAAF6B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		75D9A4CD19DA1B1200BAAF6B /* Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
+		75D9A4CE19DA1B1200BAAF6B /* Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
+		75D9A4D019DA1B4D00BAAF6B /* ConfigViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +94,14 @@
 		75D9A49C19DA138500BAAF6B /* Convertidor Dolares */ = {
 			isa = PBXGroup;
 			children = (
+				75D9A4C919DA1AE700BAAF6B /* class */,
 				75D9A4A119DA138500BAAF6B /* AppDelegate.h */,
 				75D9A4A219DA138500BAAF6B /* AppDelegate.m */,
+				75D9A4D019DA1B4D00BAAF6B /* ConfigViewControllerDelegate.h */,
+				75D9A4C319DA1AA500BAAF6B /* ConverterViewController.h */,
+				75D9A4C419DA1AA500BAAF6B /* ConverterViewController.m */,
+				75D9A4C619DA1ACB00BAAF6B /* ConfigViewController.h */,
+				75D9A4C719DA1ACB00BAAF6B /* ConfigViewController.m */,
 				75D9A4A419DA138500BAAF6B /* ViewController.h */,
 				75D9A4A519DA138500BAAF6B /* ViewController.m */,
 				75D9A4A719DA138500BAAF6B /* Main.storyboard */,
@@ -117,6 +136,17 @@
 				75D9A4B819DA138500BAAF6B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75D9A4C919DA1AE700BAAF6B /* class */ = {
+			isa = PBXGroup;
+			children = (
+				75D9A4CA19DA1B0100BAAF6B /* User.h */,
+				75D9A4CB19DA1B0100BAAF6B /* User.m */,
+				75D9A4CD19DA1B1200BAAF6B /* Converter.h */,
+				75D9A4CE19DA1B1200BAAF6B /* Converter.m */,
+			);
+			name = class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +251,11 @@
 			files = (
 				75D9A4A619DA138500BAAF6B /* ViewController.m in Sources */,
 				75D9A4A319DA138500BAAF6B /* AppDelegate.m in Sources */,
+				75D9A4CC19DA1B0100BAAF6B /* User.m in Sources */,
+				75D9A4CF19DA1B1200BAAF6B /* Converter.m in Sources */,
+				75D9A4C819DA1ACB00BAAF6B /* ConfigViewController.m in Sources */,
 				75D9A4A019DA138500BAAF6B /* main.m in Sources */,
+				75D9A4C519DA1AA500BAAF6B /* ConverterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
