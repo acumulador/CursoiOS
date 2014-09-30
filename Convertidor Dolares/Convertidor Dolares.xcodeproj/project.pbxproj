@@ -94,16 +94,9 @@
 		75D9A49C19DA138500BAAF6B /* Convertidor Dolares */ = {
 			isa = PBXGroup;
 			children = (
+				75D9A4D219DA1D2600BAAF6B /* views */,
+				75D9A4D119DA1D0E00BAAF6B /* delagates */,
 				75D9A4C919DA1AE700BAAF6B /* class */,
-				75D9A4A119DA138500BAAF6B /* AppDelegate.h */,
-				75D9A4A219DA138500BAAF6B /* AppDelegate.m */,
-				75D9A4D019DA1B4D00BAAF6B /* ConfigViewControllerDelegate.h */,
-				75D9A4C319DA1AA500BAAF6B /* ConverterViewController.h */,
-				75D9A4C419DA1AA500BAAF6B /* ConverterViewController.m */,
-				75D9A4C619DA1ACB00BAAF6B /* ConfigViewController.h */,
-				75D9A4C719DA1ACB00BAAF6B /* ConfigViewController.m */,
-				75D9A4A419DA138500BAAF6B /* ViewController.h */,
-				75D9A4A519DA138500BAAF6B /* ViewController.m */,
 				75D9A4A719DA138500BAAF6B /* Main.storyboard */,
 				75D9A4AA19DA138500BAAF6B /* Images.xcassets */,
 				75D9A4AC19DA138500BAAF6B /* LaunchScreen.xib */,
@@ -147,6 +140,29 @@
 				75D9A4CE19DA1B1200BAAF6B /* Converter.m */,
 			);
 			name = class;
+			sourceTree = "<group>";
+		};
+		75D9A4D119DA1D0E00BAAF6B /* delagates */ = {
+			isa = PBXGroup;
+			children = (
+				75D9A4A119DA138500BAAF6B /* AppDelegate.h */,
+				75D9A4A219DA138500BAAF6B /* AppDelegate.m */,
+				75D9A4D019DA1B4D00BAAF6B /* ConfigViewControllerDelegate.h */,
+			);
+			name = delagates;
+			sourceTree = "<group>";
+		};
+		75D9A4D219DA1D2600BAAF6B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				75D9A4C319DA1AA500BAAF6B /* ConverterViewController.h */,
+				75D9A4C419DA1AA500BAAF6B /* ConverterViewController.m */,
+				75D9A4C619DA1ACB00BAAF6B /* ConfigViewController.h */,
+				75D9A4C719DA1ACB00BAAF6B /* ConfigViewController.m */,
+				75D9A4A419DA138500BAAF6B /* ViewController.h */,
+				75D9A4A519DA138500BAAF6B /* ViewController.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -10,4 +10,6 @@
 
 @interface Converter : NSObject
 
+-(float) converter:(float)Pesos ToDolar:(float) valueDolar;
+
 @end

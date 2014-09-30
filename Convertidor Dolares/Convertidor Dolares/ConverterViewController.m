@@ -10,4 +10,8 @@
 
 @implementation ConverterViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+
+}
 @end

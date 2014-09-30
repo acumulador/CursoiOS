@@ -10,4 +10,9 @@
 
 @implementation Converter
 
+-(float) converter:(float)Pesos ToDolar:(float)valueDolar
+{
+    return Pesos * valueDolar;
+}
+
 @end
