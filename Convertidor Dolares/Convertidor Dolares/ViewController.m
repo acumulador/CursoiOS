@@ -30,8 +30,7 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     converterView = [segue destinationViewController];
-    NSLog(@"%@", converterView.dataTransfer);
-   // converterView.dataTransfer = _usuarioLoginText.text;
+    converterView.dataTransfer =  _usuarioLoginText.text;
 }
 
 - (IBAction)loginButton:(id)sender {

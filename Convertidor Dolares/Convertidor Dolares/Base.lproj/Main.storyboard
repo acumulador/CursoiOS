@@ -85,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-xp-56C">
-                                <rect key="frame" x="259" y="72" width="45" height="30"/>
+                                <rect key="frame" x="259" y="68" width="45" height="30"/>
                                 <state key="normal" title="Config">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -106,6 +106,9 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1990" minValue="1990" maxValue="2100" translatesAutoresizingMaskIntoConstraints="NO" id="H0G-8W-lo4">
                                 <rect key="frame" x="44" y="251" width="248" height="31"/>
+                                <connections>
+                                    <action selector="valueDolarSlider:" destination="vp1-QR-6Gp" eventType="valueChanged" id="eYO-VL-nFr"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9J-8z-TM4">
                                 <rect key="frame" x="46" y="333" width="230" height="64"/>
@@ -118,15 +121,12 @@
                                 <state key="normal" title="Salir">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="vp1-QR-6Gp" eventType="touchUpInside" id="ytC-Mu-ZrE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1990" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnb-Eq-pxv">
                                 <rect key="frame" x="33" y="295" width="39" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vf-jq-CKj">
-                                <rect key="frame" x="152" y="295" width="10" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,10 +137,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vf-jq-CKj">
+                                <rect key="frame" x="139" y="295" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="BLw-Pe-iHq"/>
+                    <connections>
+                        <outlet property="dolarValueText" destination="3ch-fh-7io" id="svL-Pr-rok"/>
+                        <outlet property="finishValueDolarLabel" destination="MUf-c0-Zcu" id="Xeb-sk-7dT"/>
+                        <outlet property="greetUserLabel" destination="lZE-d9-yuS" id="Edi-mo-gI1"/>
+                        <outlet property="initialValueDolarLabel" destination="Nnb-Eq-pxv" id="8gk-2C-nRH"/>
+                        <outlet property="resultConvertLabel" destination="M9J-8z-TM4" id="K0d-sN-2gB"/>
+                        <outlet property="valueSliderLabel" destination="5vf-jq-CKj" id="2se-Gj-wqb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGg-ng-8nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,6 +199,9 @@
                                 <state key="normal" title="Guardar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveValuesButton:" destination="wiv-hr-vpt" eventType="touchUpInside" id="yU4-z1-qjS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valor Máximo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiM-Fh-G28">
                                 <rect key="frame" x="39" y="137" width="105" height="21"/>
@@ -196,6 +213,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qPR-lT-EXa"/>
+                    <connections>
+                        <outlet property="maxValueDolarText" destination="Vf9-zh-bVw" id="g58-Gy-BgU"/>
+                        <outlet property="minValueDolarText" destination="xy5-tb-9cK" id="HUD-Ew-AYy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4h-n9-TJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

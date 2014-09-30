@@ -10,4 +10,6 @@
 
 @protocol ConfigViewControllerDelegate <NSObject>
 
+-(void) updateValues:(int)Min And:(int)MaxDolar;
+
 @end

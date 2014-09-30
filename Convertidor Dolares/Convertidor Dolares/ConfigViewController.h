@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConfigViewControllerDelegate.h"
 
 @interface ConfigViewController : UIViewController
+
+@property id <ConfigViewControllerDelegate> delegate;
+
+@property (strong, nonatomic) IBOutlet UITextField *minValueDolarText;
+@property (strong, nonatomic) IBOutlet UITextField *maxValueDolarText;
+- (IBAction)saveValuesButton:(id)sender;
 
 @end
