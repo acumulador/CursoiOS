@@ -20,6 +20,5 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordUserText;
 - (IBAction)loginButton:(id)sender;
 
-
 @end
 

@@ -48,6 +48,7 @@
         mensa = [[UIAlertView alloc] initWithTitle:@"Login Usuario" message:validateUserMessage delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles: nil];
         
         [mensa show];
+        
         return NO;
     }
     else

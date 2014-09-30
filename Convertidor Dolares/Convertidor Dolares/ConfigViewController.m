@@ -10,8 +10,15 @@
 
 @implementation ConfigViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
 - (IBAction)saveValuesButton:(id)sender {
     //Se ejecuta el delegado
     [_delegate updateValues:[_minValueDolarText.text intValue] And:[_maxValueDolarText.text intValue]];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

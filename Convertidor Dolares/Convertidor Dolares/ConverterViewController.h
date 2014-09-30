@@ -10,9 +10,12 @@
 #import "Converter.h"
 #import "ConfigViewControllerDelegate.h"
 
-@interface ConverterViewController : UIViewController
+@interface ConverterViewController : UIViewController<ConfigViewControllerDelegate, UIAlertViewDelegate>
+{
+    UIAlertView * mensa;
+}
 @property NSString * dataTransfer;
-@property id <ConfigViewControllerDelegate> delegate;
+//@property id <ConfigViewControllerDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UILabel *greetUserLabel;
 @property (strong, nonatomic) IBOutlet UITextField *dolarValueText;
