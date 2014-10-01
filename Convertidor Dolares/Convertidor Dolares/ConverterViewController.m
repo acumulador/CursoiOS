@@ -29,15 +29,19 @@
 
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    configView = [segue destinationViewController];
+    configView.delegate = self;
+}
+
 //Se implementa el delegado
 -(void) updateValues:(int)Min And:(int)MaxDolar
 {
-    if (Min<MaxDolar) {
-        _initialValueDolarLabel.text = [NSString stringWithFormat:@"%.1i", Min];
-        _finishValueDolarLabel.text = [NSString stringWithFormat:@"%.1i", MaxDolar];
-    } else {
-        mensa = [[UIAlertView alloc]initWithTitle:@"Covertidor" message:@"Valor minimo NO debe ser mayor al valor Máximo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles: nil];
-    }
+    _initialValueDolarLabel.text = [NSString stringWithFormat:@"%.1i", Min];
+    _finishValueDolarLabel.text = [NSString stringWithFormat:@"%.1i", MaxDolar];
+    _valuesDolarSlider.minimumValue = Min;
+    _valuesDolarSlider.maximumValue = MaxDolar;
 }
 
 @end

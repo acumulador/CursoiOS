@@ -17,8 +17,15 @@
 
 - (IBAction)saveValuesButton:(id)sender {
     //Se ejecuta el delegado
-    [_delegate updateValues:[_minValueDolarText.text intValue] And:[_maxValueDolarText.text intValue]];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([_minValueDolarText.text intValue] > [_maxValueDolarText.text intValue] ) {
+        
+        mensa = [[UIAlertView alloc]initWithTitle:@"Covertidor" message:@"Valor minimo NO debe ser mayor al valor Máximo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles: nil];
+        [mensa show];
+        
+    } else {
+        [_delegate updateValues:[_minValueDolarText.text intValue] And:[_maxValueDolarText.text intValue]];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 @end

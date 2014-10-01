@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ConfigViewControllerDelegate.h"
 
-@interface ConfigViewController : UIViewController
+@interface ConfigViewController : UIViewController <UIAlertViewDelegate>
+{
+    UIAlertView * mensa;
+}
 
 @property id <ConfigViewControllerDelegate> delegate;
 

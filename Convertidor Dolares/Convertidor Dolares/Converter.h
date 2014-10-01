@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ConfigViewControllerDelegate.h"
 
 @interface Converter : NSObject
+
+@property id <ConfigViewControllerDelegate> delegate;
 
 -(float) converter:(float)Pesos ToDolar:(float) valueDolar;
 

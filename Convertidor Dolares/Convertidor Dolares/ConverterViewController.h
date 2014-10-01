@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Converter.h"
 #import "ConfigViewControllerDelegate.h"
+#import "ConfigViewController.h"
 
 @interface ConverterViewController : UIViewController<ConfigViewControllerDelegate, UIAlertViewDelegate>
 {
     UIAlertView * mensa;
+    ConfigViewController * configView;
 }
 @property NSString * dataTransfer;
 //@property id <ConfigViewControllerDelegate> delegate;
@@ -25,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *resultConvertLabel;
 @property (strong, nonatomic) IBOutlet UILabel *valueSliderLabel;
 - (IBAction)exitButton:(id)sender;
+@property (strong, nonatomic) IBOutlet UISlider *valuesDolarSlider;
 
 
 
