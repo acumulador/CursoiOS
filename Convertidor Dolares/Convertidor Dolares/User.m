@@ -9,6 +9,8 @@
 #import "User.h"
 
 @implementation User
+//Si trabaje con propiedades no necesito el set y get
+
 //Implementación de propiedades
 //get
 -(NSString *) user

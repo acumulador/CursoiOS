@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
+//Si hago propiedades me ahorro el set y get, ya viene con ellos definidos.
+//@property NSString * userName;
+//@property NSString * pasword;
 {
     NSString * user;
     NSString * pass;

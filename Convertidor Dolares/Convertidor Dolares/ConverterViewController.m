@@ -29,6 +29,7 @@
 
 }
 
+//Aqui no pasa información, solo se ejecuta el segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     configView = [segue destinationViewController];

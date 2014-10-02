@@ -17,7 +17,6 @@
     ConfigViewController * configView;
 }
 @property NSString * dataTransfer;
-//@property id <ConfigViewControllerDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UILabel *greetUserLabel;
 @property (strong, nonatomic) IBOutlet UITextField *dolarValueText;

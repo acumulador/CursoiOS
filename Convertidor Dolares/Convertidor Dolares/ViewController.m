@@ -27,6 +27,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Metodo que se implementa para preparar el segue
+//Este metodo SIEMPRE se ejecuta
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     converterView = [segue destinationViewController];
@@ -36,6 +38,9 @@
 - (IBAction)loginButton:(id)sender {
    
 }
+
+//Metodo que implementa al pasar de vista con el segue
+//Este metodo pregunta si se ejecuta o no
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     
     User * validateUser = [[User alloc] init];
@@ -48,6 +53,9 @@
         mensa = [[UIAlertView alloc] initWithTitle:@"Login Usuario" message:validateUserMessage delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles: nil];
         
         [mensa show];
+        //Es mejor hacer esto en el metodo del boton del alertView
+        //_usuarioLoginText.text = nil;
+        //_passwordUserText.text = nil;
         
         return NO;
     }
@@ -56,5 +64,11 @@
         return YES;
     }
 
+}
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    _usuarioLoginText.text = nil;
+    _passwordUserText.text = nil;
 }
 @end
