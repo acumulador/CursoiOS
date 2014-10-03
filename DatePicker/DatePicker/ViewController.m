@@ -61,4 +61,18 @@
 - (IBAction)dateText:(id)sender {
     _datePicker.hidden=NO;
 }
+- (IBAction)controlViewPicker:(id)sender {
+    UISwitch * controlSwitch = sender;
+    if (controlSwitch.on) {
+        [UIView animateWithDuration:1.0 animations:^{
+            _containerView.frame = CGRectMake(_containerView.frame.origin.x, _containerView.frame.origin.y, _containerView.frame.size.width, 209);
+            _containerView.alpha = 1.0;
+        }];
+    } else {
+        [UIView animateWithDuration:1.0 animations:^{
+            _containerView.frame = CGRectMake(_containerView.frame.origin.x, _containerView.frame.origin.y, _containerView.frame.size.width, 0);
+            _containerView.alpha = 0.0;
+        }];
+    }
+}
 @end

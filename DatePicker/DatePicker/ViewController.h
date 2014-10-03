@@ -19,6 +19,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *dateText;
 - (IBAction)dateText:(id)sender;
 @property (strong, nonatomic) IBOutlet UIPickerView *paisesPickerView;
+- (IBAction)controlViewPicker:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *containerView;
 
 
 @end

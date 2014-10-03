@@ -34,7 +34,7 @@
                                 </connections>
                             </textField>
                             <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toJ-j5-Lxa">
-                                <rect key="frame" x="16" y="325" width="288" height="235"/>
+                                <rect key="frame" x="16" y="325" width="288" height="209"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eW-TZ-x8p">
                                         <rect key="frame" x="-16" y="37" width="320" height="162"/>
@@ -44,11 +44,15 @@
                             </view>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4T-WE-roz">
                                 <rect key="frame" x="260" y="281" width="51" height="31"/>
+                                <connections>
+                                    <action selector="controlViewPicker:" destination="vXZ-lx-hvc" eventType="valueChanged" id="4ak-Kq-Tw9"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="toJ-j5-Lxa" id="NGs-Sp-jpu"/>
                         <outlet property="datePicker" destination="RYY-Pp-iMb" id="uqP-v2-jmb"/>
                         <outlet property="dateText" destination="TwP-Vv-wSY" id="zLR-zf-Tyl"/>
                         <outlet property="paisesPickerView" destination="7eW-TZ-x8p" id="uA7-P8-Ti3"/>
