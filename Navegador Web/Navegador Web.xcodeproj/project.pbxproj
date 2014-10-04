@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7589C0FE19DF789B00670ED9 /* comfenalco.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7589C0FD19DF789A00670ED9 /* comfenalco.pdf */; };
 		75A6B85019DF67A000CF7884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A6B84F19DF67A000CF7884 /* main.m */; };
 		75A6B85319DF67A000CF7884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A6B85219DF67A000CF7884 /* AppDelegate.m */; };
 		75A6B85619DF67A000CF7884 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A6B85519DF67A000CF7884 /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7589C0FD19DF789A00670ED9 /* comfenalco.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = comfenalco.pdf; sourceTree = "<group>"; };
 		75A6B84A19DF67A000CF7884 /* Navegador Web.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Navegador Web.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A6B84E19DF67A000CF7884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A6B84F19DF67A000CF7884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		75A6B84C19DF67A000CF7884 /* Navegador Web */ = {
 			isa = PBXGroup;
 			children = (
+				7589C0FD19DF789A00670ED9 /* comfenalco.pdf */,
 				75A6B85119DF67A000CF7884 /* AppDelegate.h */,
 				75A6B85219DF67A000CF7884 /* AppDelegate.m */,
 				75A6B85419DF67A000CF7884 /* ViewController.h */,
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75A6B85919DF67A000CF7884 /* Main.storyboard in Resources */,
+				7589C0FE19DF789B00670ED9 /* comfenalco.pdf in Resources */,
 				75A6B85E19DF67A000CF7884 /* LaunchScreen.xib in Resources */,
 				75A6B85B19DF67A000CF7884 /* Images.xcassets in Resources */,
 			);
@@ -412,6 +416,7 @@
 				75A6B86F19DF67A000CF7884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75A6B87019DF67A000CF7884 /* Build configuration list for PBXNativeTarget "Navegador WebTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				75A6B87219DF67A000CF7884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
