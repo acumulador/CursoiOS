@@ -25,6 +25,6 @@ typedef enum
     kYellowType,
     kGreenType,
     kRamdomType
-};ColorType;
+}ColorType;
 
 #endif

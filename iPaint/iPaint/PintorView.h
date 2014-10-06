@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 
+
 @interface PintorView : UIView
 
 @property CGPoint firstTouch;
@@ -20,7 +21,9 @@
 @property UIColor * currentColor;
 @property BOOL useRandom;
 
-@property ShapeType * shapeType;
+@property ShapeType  shapeType;
+@property ColorType colorType;
+
 @property UIImage * image;
 
 @end

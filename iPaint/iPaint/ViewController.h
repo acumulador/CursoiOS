@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
+#import "PintorView.h"
 
 @interface ViewController : UIViewController
+- (IBAction)changeShapeType:(id)sender;
+- (IBAction)changeColorType:(id)sender;
 
 
 @end

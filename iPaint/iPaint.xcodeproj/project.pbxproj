@@ -16,6 +16,7 @@
 		7589C12819DF7B4B00670ED9 /* iPaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589C12719DF7B4B00670ED9 /* iPaintTests.m */; };
 		7589C13419DF7EB800670ED9 /* UIColor+Ramdom.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589C13319DF7EB800670ED9 /* UIColor+Ramdom.m */; };
 		7589C13D19DF83DC00670ED9 /* PintorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589C13C19DF83DC00670ED9 /* PintorView.m */; };
+		75D374BD19E3563600F7E536 /* mico.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D374BC19E3563600F7E536 /* mico.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7589C13319DF7EB800670ED9 /* UIColor+Ramdom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ramdom.m"; sourceTree = "<group>"; };
 		7589C13B19DF83DC00670ED9 /* PintorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PintorView.h; sourceTree = "<group>"; };
 		7589C13C19DF83DC00670ED9 /* PintorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PintorView.m; sourceTree = "<group>"; };
+		75D374BC19E3563600F7E536 /* mico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mico.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,8 @@
 		7589C10A19DF7B4B00670ED9 /* iPaint */ = {
 			isa = PBXGroup;
 			children = (
+				75D374BC19E3563600F7E536 /* mico.png */,
+				7589C13119DF7CAD00670ED9 /* Constants.h */,
 				7589C13B19DF83DC00670ED9 /* PintorView.h */,
 				7589C13C19DF83DC00670ED9 /* PintorView.m */,
 				7589C13219DF7EB800670ED9 /* UIColor+Ramdom.h */,
@@ -100,7 +104,6 @@
 				7589C11819DF7B4B00670ED9 /* Images.xcassets */,
 				7589C11A19DF7B4B00670ED9 /* LaunchScreen.xib */,
 				7589C10B19DF7B4B00670ED9 /* Supporting Files */,
-				7589C13119DF7CAD00670ED9 /* Constants.h */,
 			);
 			path = iPaint;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				7589C11719DF7B4B00670ED9 /* Main.storyboard in Resources */,
 				7589C11C19DF7B4B00670ED9 /* LaunchScreen.xib in Resources */,
+				75D374BD19E3563600F7E536 /* mico.png in Resources */,
 				7589C11919DF7B4B00670ED9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +430,7 @@
 				7589C12D19DF7B4B00670ED9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7589C12E19DF7B4B00670ED9 /* Build configuration list for PBXNativeTarget "iPaintTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +439,7 @@
 				7589C13019DF7B4B00670ED9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

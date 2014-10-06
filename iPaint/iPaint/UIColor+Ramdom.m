@@ -10,7 +10,7 @@
 
 @implementation UIColor (Ramdom)
 
-+(UIColor *) ramdomColor{
++(UIColor *) randomColor{
 
     CGFloat red = (arc4random() % 256)/256.0f;
     CGFloat green = (arc4random() % 256)/256.0f;
