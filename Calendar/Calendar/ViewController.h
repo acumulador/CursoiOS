@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Model.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIPageViewControllerDelegate>
+@property UIPageViewController * page;
 
+@property Model * modelo;
 
 @end
 

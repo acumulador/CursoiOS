@@ -15,6 +15,7 @@
 		75D374DB19E360AA00F7E536 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75D374D919E360AA00F7E536 /* LaunchScreen.xib */; };
 		75D374E719E360AA00F7E536 /* CalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D374E619E360AA00F7E536 /* CalendarTests.m */; };
 		75D374F219E361E900F7E536 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D374F119E361E900F7E536 /* CalendarViewController.m */; };
+		75D374F519E363C600F7E536 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D374F419E363C600F7E536 /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		75D374E619E360AA00F7E536 /* CalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarTests.m; sourceTree = "<group>"; };
 		75D374F019E361E900F7E536 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		75D374F119E361E900F7E536 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		75D374F319E363C600F7E536 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		75D374F419E363C600F7E536 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 		75D374C919E360AA00F7E536 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				75D374F319E363C600F7E536 /* Model.h */,
+				75D374F419E363C600F7E536 /* Model.m */,
 				75D374F019E361E900F7E536 /* CalendarViewController.h */,
 				75D374F119E361E900F7E536 /* CalendarViewController.m */,
 				75D374CE19E360AA00F7E536 /* AppDelegate.h */,
@@ -228,6 +233,7 @@
 				75D374D319E360AA00F7E536 /* ViewController.m in Sources */,
 				75D374D019E360AA00F7E536 /* AppDelegate.m in Sources */,
 				75D374CD19E360AA00F7E536 /* main.m in Sources */,
+				75D374F519E363C600F7E536 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
