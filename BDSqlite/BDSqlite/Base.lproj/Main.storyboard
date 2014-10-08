@@ -61,7 +61,7 @@
         <!--Agregar-->
         <scene sceneID="7Jr-LW-0gE">
             <objects>
-                <viewController id="g1e-hG-lge" sceneMemberID="viewController">
+                <viewController id="g1e-hG-lge" customClass="AddViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BHM-Rc-ED3"/>
                         <viewControllerLayoutGuide type="bottom" id="IHO-pS-cIx"/>
@@ -110,11 +110,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agE-Xp-uvp">
-                                <rect key="frame" x="123" y="191" width="181" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAC-9K-jsS">
                                 <rect key="frame" x="123" y="234" width="181" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -132,6 +127,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMi-yp-gus">
+                                <rect key="frame" x="16" y="124" width="320" height="162"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

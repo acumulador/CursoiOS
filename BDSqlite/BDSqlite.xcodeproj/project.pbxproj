@@ -14,6 +14,8 @@
 		757F2D5B19E5F26E004BEE94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757F2D5A19E5F26E004BEE94 /* Images.xcassets */; };
 		757F2D5E19E5F26E004BEE94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757F2D5C19E5F26E004BEE94 /* LaunchScreen.xib */; };
 		757F2D6A19E5F26E004BEE94 /* BDSqliteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F2D6919E5F26E004BEE94 /* BDSqliteTests.m */; };
+		757F2D7519E5F603004BEE94 /* Empleados.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F2D7419E5F603004BEE94 /* Empleados.m */; };
+		757F2D7819E5F61A004BEE94 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F2D7719E5F61A004BEE94 /* AddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		757F2D6319E5F26E004BEE94 /* BDSqliteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BDSqliteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		757F2D6819E5F26E004BEE94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757F2D6919E5F26E004BEE94 /* BDSqliteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDSqliteTests.m; sourceTree = "<group>"; };
+		757F2D7319E5F603004BEE94 /* Empleados.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Empleados.h; sourceTree = "<group>"; };
+		757F2D7419E5F603004BEE94 /* Empleados.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empleados.m; sourceTree = "<group>"; };
+		757F2D7619E5F61A004BEE94 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		757F2D7719E5F61A004BEE94 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +87,10 @@
 		757F2D4C19E5F26E004BEE94 /* BDSqlite */ = {
 			isa = PBXGroup;
 			children = (
+				757F2D7A19E5F7AF004BEE94 /* views */,
+				757F2D7919E5F7A7004BEE94 /* class */,
 				757F2D5119E5F26E004BEE94 /* AppDelegate.h */,
 				757F2D5219E5F26E004BEE94 /* AppDelegate.m */,
-				757F2D5419E5F26E004BEE94 /* ViewController.h */,
-				757F2D5519E5F26E004BEE94 /* ViewController.m */,
 				757F2D5719E5F26E004BEE94 /* Main.storyboard */,
 				757F2D5A19E5F26E004BEE94 /* Images.xcassets */,
 				757F2D5C19E5F26E004BEE94 /* LaunchScreen.xib */,
@@ -117,6 +123,26 @@
 				757F2D6819E5F26E004BEE94 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		757F2D7919E5F7A7004BEE94 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				757F2D7319E5F603004BEE94 /* Empleados.h */,
+				757F2D7419E5F603004BEE94 /* Empleados.m */,
+			);
+			name = class;
+			sourceTree = "<group>";
+		};
+		757F2D7A19E5F7AF004BEE94 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				757F2D7619E5F61A004BEE94 /* AddViewController.h */,
+				757F2D7719E5F61A004BEE94 /* AddViewController.m */,
+				757F2D5419E5F26E004BEE94 /* ViewController.h */,
+				757F2D5519E5F26E004BEE94 /* ViewController.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757F2D7819E5F61A004BEE94 /* AddViewController.m in Sources */,
+				757F2D7519E5F603004BEE94 /* Empleados.m in Sources */,
 				757F2D5619E5F26E004BEE94 /* ViewController.m in Sources */,
 				757F2D5319E5F26E004BEE94 /* AppDelegate.m in Sources */,
 				757F2D5019E5F26E004BEE94 /* main.m in Sources */,
@@ -412,6 +440,7 @@
 				757F2D6F19E5F26E004BEE94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		757F2D7019E5F26E004BEE94 /* Build configuration list for PBXNativeTarget "BDSqliteTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +449,7 @@
 				757F2D7219E5F26E004BEE94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
