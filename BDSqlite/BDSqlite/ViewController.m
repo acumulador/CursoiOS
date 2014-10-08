@@ -9,14 +9,16 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property Empleados * empleado;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _empleado = [[Empleados alloc] init];
+    [_empleado createDatabaseInDocuments];
 }
 
 - (void)didReceiveMemoryWarning {

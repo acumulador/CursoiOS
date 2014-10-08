@@ -26,8 +26,4 @@
 -(void) searchPathOfDatabase;
 -(void) createDatabaseInDocuments;
 
-
-
-
-
 @end

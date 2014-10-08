@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Empleados.h"
 
 @interface ViewController : UIViewController
 

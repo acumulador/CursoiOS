@@ -35,7 +35,7 @@ const char * dbPath;
             char * error;
             const char * sql_tabla = "CREATE TABLE IF NOT EXISTS tbl_empleados (id INTEGER PRIMARY KEY AUTOINCREMENT, emp_name TEXT, emp_cedula TEXT, emp_job TEXT, emp_phone TEXT, emp_adress TEXT)";
             
-            if (sqlite3_exec(conexDb, sql_tabla, NULL, NULL, &error)==SQLITE_DONE) {
+            if (sqlite3_exec(conexDb, sql_tabla, NULL, NULL, &error)==SQLITE_OK) {
                 NSLog(@"Tabla creada con exito!!");
             } else {
                 NSLog(@"Error en SQL");
@@ -50,11 +50,5 @@ const char * dbPath;
         NSLog(@"La base de datos ya existe!!");
     }
 }
-
-
-
-
-
-
 
 @end
