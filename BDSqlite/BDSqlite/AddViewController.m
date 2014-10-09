@@ -49,9 +49,4 @@
     _nameEmpText.text = _docEmpText.text = _jobEmpText.text = _phoneEmpText.text = _adressEmpText.text = nil;
 }
 
-
-
-
-
-
 @end

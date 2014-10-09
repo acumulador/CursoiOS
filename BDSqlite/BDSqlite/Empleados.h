@@ -27,5 +27,10 @@
 -(void) createDatabaseInDocuments;
 -(void) insertEmployedInDatabases;
 -(void) searchEmployedInDataBase;
+-(void) updateEmployedInDataBase;
+-(void) deleteEmployedInDataBase;
+
+-(void) searchEmployed;
+
 
 @end

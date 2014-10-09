@@ -50,7 +50,65 @@ const char * dbPath;
     }
 }
 
+-(void)deleteEmployedInDataBase
+{
+    [self searchPathOfDatabase];
+    sqlite3_stmt * queryDel;
+    
+    if (sqlite3_open(dbPath, &conexDb)==SQLITE_OK) {
+        
+        NSString * stringDel = [NSString stringWithFormat:@"DELETE FROM tbl_empleados WHERE emp_cedula = \"%@\"", _empCedula];
+        
+        const char * delSql = [stringDel UTF8String];
+        sqlite3_prepare_v2(conexDb, delSql, -1, &queryDel, NULL);
+        
+        if (sqlite3_step(queryDel)==SQLITE_DONE) {
+            _status = @"Empleado Eliminado correctamente!!";
+        } else {
+            NSLog(@"Error Eliminando el empleado!!");
+        }
+        
+        sqlite3_finalize(queryDel);
+        sqlite3_close(conexDb);
+        
+    } else {
+        NSLog(@"Error al abrir la base de datos");
+    }
+}
+
+
+-(void)updateEmployedInDataBase
+{
+    [self searchPathOfDatabase];
+    sqlite3_stmt * queryUpdate;
+    
+    if (sqlite3_open(dbPath, &conexDb)==SQLITE_OK) {
+        
+        NSString * stringUpdate = [NSString stringWithFormat:@"UPDATE tbl_empleados SET emp_name = \"%@\", emp_job = \"%@\", emp_phone = \"%@\", emp_adress = \"%@\"  WHERE emp_cedula = \"%@\"",_empName, _empJob, _empPhone, _empAdress, _empCedula];
+        
+        const char * updateSql = [stringUpdate UTF8String];
+        sqlite3_prepare_v2(conexDb, updateSql, -1, &queryUpdate, NULL);
+        
+        if (sqlite3_step(queryUpdate)==SQLITE_DONE) {
+            _status = @"Empleado Actualizado con Exito!!";
+        } else {
+            NSLog(@"Error actualizando el empleado!!");
+        }
+        
+        sqlite3_finalize(queryUpdate);
+        sqlite3_close(conexDb);
+        
+    } else {
+        NSLog(@"Error al abrir la base de datos");
+    }
+}
+
 -(void)searchEmployedInDataBase
+{
+    [self searchEmployed];
+}
+
+-(void) searchEmployed
 {
     [self searchPathOfDatabase];
     sqlite3_stmt * querySearch;
@@ -77,11 +135,9 @@ const char * dbPath;
         sqlite3_close(conexDb);
         
     } else {
-        
+        NSLog(@"Error abriendo la base de datos!!");
     }
 }
-
-
 
 -(void)createDatabaseInDocuments
 {

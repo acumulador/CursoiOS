@@ -16,12 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    searchEmpleado = [[Empleados alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
@@ -34,4 +33,19 @@
 }
 */
 
+- (IBAction)searchEmpButton:(id)sender {
+    searchEmpleado.empCedula = _searchDocText.text;
+    [searchEmpleado searchEmployedInDataBase];
+    
+    _nomEmpLabel.text = searchEmpleado.empName;
+    _cedEmpLabel.text = searchEmpleado.empCedula;
+    _jobEmpLabel.text = searchEmpleado.empJob;
+    _adressEmpLabel.text = searchEmpleado.empAdress;
+    _phoneEmpLabel.text = searchEmpleado.empPhone;
+    
+    _responseLabel.text = searchEmpleado.status;
+    
+    [self.view endEditing:YES];
+    _searchDocText.text = nil;
+}
 @end
