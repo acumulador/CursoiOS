@@ -1,0 +1,24 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="942" measuredH="275" mockupW="932" mockupH="242">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhoneMenu" x="10" y="33" w="-1" h="-1" measuredW="215" measuredH="236" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20%20%20%20%20%20%20SUPERMERCADO%0A__%20ICONO%0A+%20GRANOS%2C%20%3E%0A+%20LACTEOS%2C%20%3E%0A+%20CARNICOS%2C%20%3E%0A+%20LEGUMBRES%2C%20%3E%0A-%20Delete%5Cr%28Cancel%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::iPhoneMenu" x="240" y="33" w="-1" h="-1" measuredW="215" measuredH="186" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20GRANOS%0A+%20ARROZ%2C%20%3E%0A+%20FRIJOL%2C%20%3E%0A+%20ALBERJA%2C%20%3E%0A+%20LENTEJA%2C%20%3E%0A-%20Delete%5Cr%28Cancel%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Accordion" x="481" y="33" w="-1" h="-1" measuredW="153" measuredH="186" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Arroz%20Diana%205Lb%20%241500%0AFrijol%20Aburra%206LB%20%242000%0AItem%20Three%0AItem%20Four</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::iPhoneMenu" x="727" y="33" w="-1" h="-1" measuredW="215" measuredH="242" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Lista%20de%20Mercado%2008/10/2014%0ASupermercado%20De%201%0Av%20Arroz%20aburra%2C%20%241500%0Av%20Leche%20Colanta%2C%20%242000%0Av%20Salsa%20Fruco%2C%20%241600%0Av%20Aceite%20Girasol%2C%20%241500%0A%20%0Av%20Total%20Lista%2C%206600</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
