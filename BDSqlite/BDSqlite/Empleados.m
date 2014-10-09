@@ -20,8 +20,34 @@ const char * dbPath;
 -(void)searchPathOfDatabase
 {
     NSString * rutaFolderDoc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0 ];
+    NSLog(@"Ruta BD %@",rutaFolderDoc);
     _dataBasePath = [rutaFolderDoc stringByAppendingPathComponent:@"empleados.db"];
     dbPath = [_dataBasePath UTF8String];
+}
+
+-(void)insertEmployedInDatabases
+{
+    [self searchPathOfDatabase];
+    sqlite3_stmt * queryInsert;
+    
+    if (sqlite3_open(dbPath, &conexDb)==SQLITE_OK) {
+        NSString * stringInsert = [NSString stringWithFormat:@"INSERT INTO tbl_empleados (emp_name, emp_cedula, emp_job, emp_phone, emp_adress) VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\")", _empName, _empCedula, _empJob,_empPhone, _empAdress];
+        
+        const char * insertSql = [stringInsert UTF8String];
+        sqlite3_prepare_v2(conexDb, insertSql, -1, &queryInsert, NULL);
+        
+        if (sqlite3_step(queryInsert)==SQLITE_DONE) {
+            _status = @"Empleado creado con Exito!!";
+        } else {
+            NSLog(@"Error almacenando el empleado!!");
+        }
+        
+        sqlite3_finalize(queryInsert);
+        sqlite3_close(conexDb);
+        
+    } else {
+        NSLog(@"Error al abrir la base de datos");
+    }
 }
 
 -(void)createDatabaseInDocuments
@@ -29,7 +55,7 @@ const char * dbPath;
     [self searchPathOfDatabase];
     NSFileManager * fm = [[NSFileManager alloc] init];
     if ([fm fileExistsAtPath:_dataBasePath]==NO) {
-        if (sqlite3_open(dbPath, &conexDb)) {
+        if (sqlite3_open(dbPath, &conexDb)==SQLITE_OK) {
             NSLog(@"La base de datos se creo con exito!!");
             
             char * error;
