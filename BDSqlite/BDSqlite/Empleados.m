@@ -50,6 +50,39 @@ const char * dbPath;
     }
 }
 
+-(void)searchEmployedInDataBase
+{
+    [self searchPathOfDatabase];
+    sqlite3_stmt * querySearch;
+    
+    if (sqlite3_open(dbPath, &conexDb)==SQLITE_OK) {
+        NSString * stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_empleados WHERE emp_cedula = \"%@\"", _empCedula];
+        
+        const char * searchSql = [stringSearch UTF8String];
+        if (sqlite3_prepare_v2(conexDb, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {
+            if (sqlite3_step(querySearch)==SQLITE_ROW) {
+                _status = @"Usuario Encontrado";
+                _empId = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 0)];
+                _empName = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)];
+                _empCedula = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 2)];
+                _empJob = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)];
+                _empPhone = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)];
+                _empAdress = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 5)];
+            } else {
+                NSLog(@"Error en la consulta!!");
+            }
+        }
+        
+        sqlite3_finalize(querySearch);
+        sqlite3_close(conexDb);
+        
+    } else {
+        
+    }
+}
+
+
+
 -(void)createDatabaseInDocuments
 {
     [self searchPathOfDatabase];

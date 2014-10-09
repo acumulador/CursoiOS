@@ -17,6 +17,7 @@
 		757F2D7519E5F603004BEE94 /* Empleados.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F2D7419E5F603004BEE94 /* Empleados.m */; };
 		757F2D7819E5F61A004BEE94 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F2D7719E5F61A004BEE94 /* AddViewController.m */; };
 		757F2D7C19E5FFC1004BEE94 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 757F2D7B19E5FFC1004BEE94 /* libsqlite3.dylib */; };
+		757F2D7F19E6141D004BEE94 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F2D7E19E6141D004BEE94 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		757F2D7619E5F61A004BEE94 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		757F2D7719E5F61A004BEE94 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		757F2D7B19E5FFC1004BEE94 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		757F2D7D19E6141D004BEE94 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		757F2D7E19E6141D004BEE94 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				757F2D7719E5F61A004BEE94 /* AddViewController.m */,
 				757F2D5419E5F26E004BEE94 /* ViewController.h */,
 				757F2D5519E5F26E004BEE94 /* ViewController.m */,
+				757F2D7D19E6141D004BEE94 /* SearchViewController.h */,
+				757F2D7E19E6141D004BEE94 /* SearchViewController.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				757F2D7519E5F603004BEE94 /* Empleados.m in Sources */,
 				757F2D5619E5F26E004BEE94 /* ViewController.m in Sources */,
 				757F2D5319E5F26E004BEE94 /* AppDelegate.m in Sources */,
+				757F2D7F19E6141D004BEE94 /* SearchViewController.m in Sources */,
 				757F2D5019E5F26E004BEE94 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
