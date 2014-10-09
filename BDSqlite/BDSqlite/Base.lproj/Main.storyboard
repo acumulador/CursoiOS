@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmW-EH-kFQ">
-                                <rect key="frame" x="137" y="188" width="54" height="30"/>
+                                <rect key="frame" x="133" y="145" width="54" height="30"/>
                                 <state key="normal" title="Agregar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npw-NC-vZa">
-                                <rect key="frame" x="141" y="251" width="49" height="30"/>
+                                <rect key="frame" x="136" y="197" width="49" height="30"/>
                                 <state key="normal" title="Buscar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpK-by-N2v">
-                                <rect key="frame" x="141" y="311" width="68" height="30"/>
+                                <rect key="frame" x="126" y="246" width="68" height="30"/>
                                 <state key="normal" title="Actualizar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g49-qc-IBT">
-                                <rect key="frame" x="141" y="384" width="55" height="30"/>
+                                <rect key="frame" x="133" y="300" width="55" height="30"/>
                                 <state key="normal" title="Eliminar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -53,10 +53,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m33-94-kv2">
-                                <rect key="frame" x="118" y="447" width="84" height="30"/>
+                                <rect key="frame" x="118" y="350" width="84" height="30"/>
                                 <state key="normal" title="Listar Todos">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gdZ-cb-bnY" kind="push" id="a1s-nK-Kdn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -165,6 +168,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9I-pd-3Gd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1138" y="289"/>
+        </scene>
+        <!--Listar Todos-->
+        <scene sceneID="Y9F-Ay-CfV">
+            <objects>
+                <tableViewController id="gdZ-cb-bnY" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aIu-Yi-zBX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9Kt-W1-grp">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Kt-W1-grp" id="TZD-Vh-3XS">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gdZ-cb-bnY" id="iSl-Lk-Qdc"/>
+                            <outlet property="delegate" destination="gdZ-cb-bnY" id="ymj-ZE-LM4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Listar Todos" id="LrP-en-sYe"/>
+                    <connections>
+                        <outlet property="datosTableView" destination="aIu-Yi-zBX" id="whz-nf-7rI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHc-WD-VYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="319"/>
         </scene>
         <!--Actualizar-->
         <scene sceneID="KD3-YL-p0K">
@@ -394,7 +427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSq-lK-Tfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1626" y="883"/>
+            <point key="canvasLocation" x="1536" y="1007"/>
         </scene>
         <!--Consultar-->
         <scene sceneID="OCl-g1-sER">
