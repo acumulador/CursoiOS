@@ -112,30 +112,59 @@ const char * dbPath;
 {
     [self searchPathOfDatabase];
     sqlite3_stmt * querySearch;
+    NSString * stringSearch;
+    NSMutableArray * arrayEmployes;
     
-    if (sqlite3_open(dbPath, &conexDb)==SQLITE_OK) {
-        NSString * stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_empleados WHERE emp_cedula = \"%@\"", _empCedula];
-        
-        const char * searchSql = [stringSearch UTF8String];
-        if (sqlite3_prepare_v2(conexDb, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {
-            if (sqlite3_step(querySearch)==SQLITE_ROW) {
-                _status = @"Usuario Encontrado";
-                _empId = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 0)];
-                _empName = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)];
-                _empCedula = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 2)];
-                _empJob = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)];
-                _empPhone = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)];
-                _empAdress = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 5)];
-            } else {
-                NSLog(@"Error en la consulta!!");
-            }
+    if (_empCedula==nil) {
+        //Consulto todos los empleados
+        stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_empleados ORDER BY emp_name"];
+        if (sqlite3_open(dbPath, &conexDb)==SQLITE_OK) {
+            const char * searchSql = [stringSearch UTF8String];
+            if (sqlite3_prepare_v2(conexDb, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {
+                
+                //Ciclo para todos los registro
+                while (sqlite3_step(querySearch)==SQLITE_ROW) {
+                    _status = @"Usuario Encontrado";
+                    _empId = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 0)];
+                    _empName = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)];
+                    _empCedula = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 2)];
+                    _empJob = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)];
+                    _empPhone = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)];
+                    _empAdress = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 5)];
+                
+                }
+            
+            sqlite3_finalize(querySearch);
+            sqlite3_close(conexDb);
+            
+        } else {
+            NSLog(@"Error abriendo la base de datos!!");
         }
-        
-        sqlite3_finalize(querySearch);
-        sqlite3_close(conexDb);
-        
     } else {
-        NSLog(@"Error abriendo la base de datos!!");
+        //Consulto por parametro un empleado
+        stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_empleados WHERE emp_cedula = \"%@\"", _empCedula];
+        if (sqlite3_open(dbPath, &conexDb)==SQLITE_OK) {
+            const char * searchSql = [stringSearch UTF8String];
+            if (sqlite3_prepare_v2(conexDb, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {
+                if (sqlite3_step(querySearch)==SQLITE_ROW) {
+                    _status = @"Usuario Encontrado";
+                    _empId = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 0)];
+                    _empName = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)];
+                    _empCedula = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 2)];
+                    _empJob = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)];
+                    _empPhone = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)];
+                    _empAdress = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 5)];
+                } else {
+                    NSLog(@"Error en la consulta!!");
+                }
+            }
+            
+            sqlite3_finalize(querySearch);
+            sqlite3_close(conexDb);
+            
+        } else {
+            NSLog(@"Error abriendo la base de datos!!");
+        }
     }
 }
 
