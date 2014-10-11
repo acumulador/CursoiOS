@@ -21,6 +21,7 @@
 		759EC4A519E63E4D007B612B /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759EC4A419E63E4D007B612B /* UpdateViewController.m */; };
 		759EC4A819E652CE007B612B /* DeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759EC4A719E652CE007B612B /* DeleteViewController.m */; };
 		759EC4AB19E66378007B612B /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759EC4AA19E66378007B612B /* TableViewController.m */; };
+		75A2EE5819E8A983004DB5F3 /* ListadoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EE5719E8A983004DB5F3 /* ListadoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		759EC4A719E652CE007B612B /* DeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteViewController.m; sourceTree = "<group>"; };
 		759EC4A919E66378007B612B /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		759EC4AA19E66378007B612B /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		75A2EE5619E8A983004DB5F3 /* ListadoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListadoViewController.h; sourceTree = "<group>"; };
+		75A2EE5719E8A983004DB5F3 /* ListadoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListadoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				759EC4A719E652CE007B612B /* DeleteViewController.m */,
 				759EC4A919E66378007B612B /* TableViewController.h */,
 				759EC4AA19E66378007B612B /* TableViewController.m */,
+				75A2EE5619E8A983004DB5F3 /* ListadoViewController.h */,
+				75A2EE5719E8A983004DB5F3 /* ListadoViewController.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				757F2D5319E5F26E004BEE94 /* AppDelegate.m in Sources */,
 				757F2D7F19E6141D004BEE94 /* SearchViewController.m in Sources */,
 				757F2D5019E5F26E004BEE94 /* main.m in Sources */,
+				75A2EE5819E8A983004DB5F3 /* ListadoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

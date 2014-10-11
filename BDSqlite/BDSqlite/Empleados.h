@@ -21,7 +21,12 @@
 @property NSString * empPhone;
 @property NSString * empAdress;
 
+@property NSMutableArray * arrayEmployesNames;
+@property NSMutableArray * arrayEmployesCedula;
+
 @property NSString * status;
+
+@property NSString * prueba;
 
 -(void) searchPathOfDatabase;
 -(void) createDatabaseInDocuments;

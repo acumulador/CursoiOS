@@ -113,7 +113,8 @@ const char * dbPath;
     [self searchPathOfDatabase];
     sqlite3_stmt * querySearch;
     NSString * stringSearch;
-    NSMutableArray * arrayEmployes;
+    _arrayEmployesNames = [[NSMutableArray alloc]init];
+    _arrayEmployesCedula = [[NSMutableArray alloc]init];
     
     if (_empCedula==nil) {
         //Consulto todos los empleados
@@ -124,16 +125,14 @@ const char * dbPath;
                 
                 //Ciclo para todos los registro
                 while (sqlite3_step(querySearch)==SQLITE_ROW) {
-                    _status = @"Usuario Encontrado";
-                    _empId = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 0)];
-                    _empName = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)];
-                    _empCedula = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 2)];
-                    _empJob = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)];
-                    _empPhone = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)];
-                    _empAdress = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 5)];
-                
+                    
+                    [_arrayEmployesNames addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)]];
+                    
+                    [_arrayEmployesCedula addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 2)]];
                 }
-            
+                
+                _status = @"Usuarios Listados!!";
+            }
             sqlite3_finalize(querySearch);
             sqlite3_close(conexDb);
             

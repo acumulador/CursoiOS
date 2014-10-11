@@ -1,24 +1,29 @@
 //
-//  TableViewController.m
+//  ListadoViewController.m
 //  BDSqlite
 //
-//  Created by Juan C Salazar on 9/10/14.
+//  Created by Juan C Salazar on 10/10/14.
 //  Copyright (c) 2014 Juan C Salazar. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "ListadoViewController.h"
 
-@interface TableViewController ()
+@interface ListadoViewController ()
+
+@property NSArray * datosEjemplo;
 
 @end
 
-@implementation TableViewController
+@implementation ListadoViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     listEmpleados = [[Empleados alloc]init];
     listEmpleados.empCedula = nil;
     [listEmpleados searchEmployed];
+    
+    //_datosEjemplo = [[NSArray alloc] initWithObjects:@"Juan", @"Carlos", @"JoanMa", @"JuanPa", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,28 +31,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"Total de registros: %i",[listEmpleados.arrayEmployesNames count]);
+    //return [_datosEjemplo count];
     return [listEmpleados.arrayEmployesNames count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = @"jojo";
-    //UITableViewCell * cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"]];
+    cell.textLabel.text = [listEmpleados.arrayEmployesNames objectAtIndex:indexPath.row];
+    
+    cell.detailTextLabel.text = [listEmpleados.arrayEmployesCedula objectAtIndex:indexPath.row];
     
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
