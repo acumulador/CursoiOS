@@ -10,22 +10,17 @@
         <text>%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20GRANOS%0A+%20ARROZ%2C%20%3E%0A+%20FRIJOL%2C%20%3E%0A+%20ALBERJA%2C%20%3E%0A+%20LENTEJA%2C%20%3E%0A-%20Delete%5Cr%28Cancel%29</text>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::iPhoneMenu" x="794" y="279" w="-1" h="-1" measuredW="215" measuredH="213" zOrder="2" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>%20%20%20%20%20%20%20ARROZ%20Y%20PRECIO%0Av%20Aburra%2C%241500%0A%20%20%20%20Marfil%2C%20%241450%20%0A%20%20%20Federal%2C%20%241600%0A%20%20%20Do%F1a%20Pepa%2C%20%242000%0A%20%0Av%20An%20empty%20row%2C%20%28above%29</text>
-      </controlProperties>
-    </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::Alert" x="821" y="99" w="-1" h="-1" measuredW="200" measuredH="133" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Alert" x="821" y="99" w="-1" h="-1" measuredW="200" measuredH="133" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Aburra%0AEnviar%20arroz%20aburra%20a%20la%20lista%20de%20mercado%0ANo%2C%20Yes</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::iPhoneMenu" x="1042" y="78" w="-1" h="-1" measuredW="215" measuredH="242" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::iPhoneMenu" x="1042" y="78" w="-1" h="-1" measuredW="215" measuredH="242" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Lista%20de%20Mercado%2008/10/2014%0ASupermercado%20De%201%0Av%20Arroz%20aburra%2C%20%241500%0Av%20Leche%20Colanta%2C%20%242000%0Av%20Salsa%20Fruco%2C%20%241600%0Av%20Aceite%20Girasol%2C%20%241500%0A%20%0Av%20Total%20Lista%2C%206600</text>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::Accordion" x="567" y="128" w="-1" h="-1" measuredW="150" measuredH="186" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Accordion" x="567" y="128" w="-1" h="-1" measuredW="150" measuredH="186" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Arroz%20Diana%205Lb%20%241500%0AItem%20Two%0A-%20Sub-Item%202.1%0A-%20Sub-Item%202.2%0AItem%20Three%0AItem%20Four</text>
       </controlProperties>
