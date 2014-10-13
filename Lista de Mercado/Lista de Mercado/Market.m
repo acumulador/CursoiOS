@@ -51,6 +51,33 @@ const char * dbPath;
     }
 }
 
+-(void)loadProductsOfCategory:(int)idCategory
+{
+    [self searchPathOfDatabase];
+    sqlite3_stmt * querySearch;
+    NSString * stringSearch;
+    
+    _arrayProduct = [[NSMutableArray alloc]init];
+    _arrayValProduct = [[NSMutableArray alloc]init];
+    
+    stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_productos WHERE idcategoria = %i ORDER BY ds_producto ASC", idCategory];
+    
+    if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
+        const char * searchSql = [stringSearch UTF8String];
+        if (sqlite3_prepare_v2(conexDB, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {
+            //Ciclo para todos los registro
+            while (sqlite3_step(querySearch)==SQLITE_ROW) {
+                
+                [_arrayProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)]];
+                
+                [_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)]];
+            }
+        }
+    }else{
+        NSLog(@"Error abriendo la base de datos!!");
+    }
+}
+
 
 -(void)loadCategorys
 {
@@ -73,7 +100,6 @@ const char * dbPath;
     }else{
         NSLog(@"Error abriendo la base de datos!!");
     }
-    
 }
 
 @end
