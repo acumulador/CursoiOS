@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
-#import "ConexDB.h"
 
 @interface Market : NSObject
+{
+    sqlite3 * conexDB;
+}
+
+@property NSMutableArray * arrayDsCategory;
+
+//Sobre la conexion
+//--------------------------------------------
+-(void) searchPathOfDatabase;
+-(void) createDatabaseInDocuments;
+//--------------------------------------------
 
 -(void) loadCategorys;
 //Carga productos por categoria seleccionada
@@ -18,7 +28,7 @@
 //Cargar la lista de mercado de la ultima lista
 -(void) loadMarketWithIdListMarket:(NSString *) idListMarket;
 //Cargar listas de mercado
--(void) loadListMarket;
+//-(void) loadListMarket;
 
 //Agrega producto seleccionada a la lista actual
 -(void) addProductAtMarket:(NSString *) idProduct;

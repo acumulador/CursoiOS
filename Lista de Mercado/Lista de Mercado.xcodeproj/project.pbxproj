@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		755CC0DB19EB41C000CEEF69 /* Market.m in Sources */ = {isa = PBXBuildFile; fileRef = 755CC0DA19EB41C000CEEF69 /* Market.m */; };
 		755CC0DD19EB4D0700CEEF69 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 755CC0DC19EB4D0700CEEF69 /* libsqlite3.dylib */; };
-		755CC0E019EB4D6500CEEF69 /* ConexDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 755CC0DF19EB4D6500CEEF69 /* ConexDB.m */; };
 		75A2EE6819E8BF82004DB5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EE6719E8BF82004DB5F3 /* main.m */; };
 		75A2EE6B19E8BF82004DB5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EE6A19E8BF82004DB5F3 /* AppDelegate.m */; };
 		75A2EE6E19E8BF82004DB5F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EE6D19E8BF82004DB5F3 /* ViewController.m */; };
@@ -36,8 +35,6 @@
 		755CC0D919EB41C000CEEF69 /* Market.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Market.h; sourceTree = "<group>"; };
 		755CC0DA19EB41C000CEEF69 /* Market.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Market.m; sourceTree = "<group>"; };
 		755CC0DC19EB4D0700CEEF69 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		755CC0DE19EB4D6500CEEF69 /* ConexDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConexDB.h; sourceTree = "<group>"; };
-		755CC0DF19EB4D6500CEEF69 /* ConexDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConexDB.m; sourceTree = "<group>"; };
 		75A2EE6219E8BF81004DB5F3 /* Lista de Mercado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lista de Mercado.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2EE6619E8BF82004DB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A2EE6719E8BF82004DB5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,8 +80,6 @@
 			children = (
 				755CC0D919EB41C000CEEF69 /* Market.h */,
 				755CC0DA19EB41C000CEEF69 /* Market.m */,
-				755CC0DE19EB4D6500CEEF69 /* ConexDB.h */,
-				755CC0DF19EB4D6500CEEF69 /* ConexDB.m */,
 			);
 			name = class;
 			sourceTree = "<group>";
@@ -268,7 +263,6 @@
 				CFB24C1B19EB52EA00470CE1 /* ListMarketTableViewController.m in Sources */,
 				CFB24C1519EB528400470CE1 /* CategoryTableViewController.m in Sources */,
 				75A2EE6B19E8BF82004DB5F3 /* AppDelegate.m in Sources */,
-				755CC0E019EB4D6500CEEF69 /* ConexDB.m in Sources */,
 				CFB24C1819EB52B200470CE1 /* ProductsTableViewController.m in Sources */,
 				75A2EE6819E8BF82004DB5F3 /* main.m in Sources */,
 				755CC0DB19EB41C000CEEF69 /* Market.m in Sources */,
