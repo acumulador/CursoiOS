@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Market.h"
 
 @interface ListMarketTableViewController : UITableViewController
+{
+    Market * listMarket;
+}
+
+@property (strong, nonatomic) IBOutlet UILabel *totalMarketLabel;
 
 @end

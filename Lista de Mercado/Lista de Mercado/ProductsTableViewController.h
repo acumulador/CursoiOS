@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListMarketTableViewController.h"
 #import "Market.h"
 
 @interface ProductsTableViewController : UITableViewController
 {
     Market * productsOfCategory;
+    ListMarketTableViewController * listMarketVC;
 }
 
 @property NSString * dataTransfer;

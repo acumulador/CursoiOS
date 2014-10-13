@@ -17,6 +17,7 @@
 @property NSMutableArray * arrayDsCategory;
 @property NSMutableArray * arrayProduct;
 @property NSMutableArray * arrayValProduct;
+@property NSMutableArray * arrayCantProduct;
 
 //Sobre la conexion
 //--------------------------------------------
@@ -28,7 +29,7 @@
 //Carga productos por categoria seleccionada
 -(void) loadProductsOfCategory:(int) idCategory;
 //Cargar la lista de mercado de la ultima lista
--(void) loadMarketWithIdListMarket:(NSString *) idListMarket;
+-(void) loadMarketWithIdListMarket:(int) idListMarket;
 //Cargar listas de mercado
 //-(void) loadListMarket;
 

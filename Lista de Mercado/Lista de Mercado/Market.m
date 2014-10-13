@@ -51,6 +51,36 @@ const char * dbPath;
     }
 }
 
+-(void)loadMarketWithIdListMarket:(int) idListMarket
+{
+    //Cargar lista de mercado con parametro para ultima lista
+    [self searchPathOfDatabase];
+    sqlite3_stmt * querySearch;
+    NSString * stringSearch;
+    
+    _arrayProduct = [[NSMutableArray alloc]init];
+    _arrayCantProduct = [[NSMutableArray alloc]init];
+    
+    stringSearch = [NSString stringWithFormat:@"Query de Jhon %i", idListMarket];
+    
+    if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
+        const char * searchSql = [stringSearch UTF8String];
+        if (sqlite3_prepare_v2(conexDB, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {
+            //Ciclo para todos los registro
+            while (sqlite3_step(querySearch)==SQLITE_ROW) {
+                
+                [_arrayProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)]];
+                
+                [_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)]];
+                
+                [_arrayCantProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)]];
+            }
+        }
+    }else{
+        NSLog(@"Error abriendo la base de datos!!");
+    }
+}
+
 -(void)loadProductsOfCategory:(int)idCategory
 {
     [self searchPathOfDatabase];
@@ -87,7 +117,7 @@ const char * dbPath;
     
     _arrayDsCategory = [[NSMutableArray alloc]init];
     
-    stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_categorias ORDER BY ds_categoria ASC"];
+    stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_categorias ORDER BY id_categoria ASC"];
     if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
         const char * searchSql = [stringSearch UTF8String];
         if (sqlite3_prepare_v2(conexDB, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {

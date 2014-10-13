@@ -18,7 +18,7 @@
     [super viewDidLoad];
     
     productsOfCategory = [[Market alloc]init];
-    [productsOfCategory loadProductsOfCategory:2];
+    [productsOfCategory loadProductsOfCategory:[_dataTransfer intValue]+1];
 }
 
 - (void)didReceiveMemoryWarning {

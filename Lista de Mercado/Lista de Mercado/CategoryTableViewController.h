@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProductsTableViewController.h"
 #import "Market.h"
 
 @interface CategoryTableViewController : UITableViewController
 {
     Market * categoryMarket;
+    ProductsTableViewController * productsVC;
 }
 
 @end

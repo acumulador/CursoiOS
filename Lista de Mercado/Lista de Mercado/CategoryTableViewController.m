@@ -33,7 +33,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    NSLog(@"Registros: %i",[categoryMarket.arrayDsCategory count]);
     return [categoryMarket.arrayDsCategory count];
 }
 
@@ -45,6 +44,12 @@
     cell.textLabel.text = [categoryMarket.arrayDsCategory objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    productsVC = [segue destinationViewController];
+    productsVC.dataTransfer = [NSString stringWithFormat:@"%i",[self.tableView indexPathForSelectedRow].row];
 }
 
 /*
