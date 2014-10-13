@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellProduct" textLabel="7Sc-z3-uAa" detailTextLabel="1Zw-YD-U5I" style="IBUITableViewCellStyleValue1" id="EEm-Ha-MUM">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellProduct" textLabel="7Sc-z3-uAa" detailTextLabel="1Zw-YD-U5I" style="IBUITableViewCellStyleValue1" id="EEm-Ha-MUM">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EEm-Ha-MUM" id="Qtc-AA-ZeK">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -107,6 +107,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hVR-SW-Pd0" kind="push" id="UWq-Pd-r0R"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

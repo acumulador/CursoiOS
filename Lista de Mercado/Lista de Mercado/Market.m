@@ -51,6 +51,30 @@ const char * dbPath;
     }
 }
 
+-(void)sumValuesMarketList:(int)idListMarket
+{
+    [self searchPathOfDatabase];
+    sqlite3_stmt * querySearch;
+    NSString * stringSearch;
+    
+    _totalValuesMarket = [[NSString alloc]init];
+    
+    stringSearch = [NSString stringWithFormat:@"select sum(valor_sub) as total_mercado from tbl_mercado where idmercado = %i", idListMarket];
+    
+    if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
+        const char * searchSql = [stringSearch UTF8String];
+        if (sqlite3_prepare_v2(conexDB, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {
+            if (sqlite3_step(querySearch)==SQLITE_ROW) {
+                _totalValuesMarket = [NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 0)];
+            }else{
+                NSLog(@"Error en la consulta!!");
+            }
+        }
+    }else{
+        NSLog(@"Error abriendo la base de datos!!");
+    }
+}
+
 -(void)loadMarketWithIdListMarket:(int) idListMarket
 {
     //Cargar lista de mercado con parametro para ultima lista
@@ -59,9 +83,11 @@ const char * dbPath;
     NSString * stringSearch;
     
     _arrayProduct = [[NSMutableArray alloc]init];
+    _arrayCantProduct = [[NSMutableArray alloc]init];
+    _arrayValProduct = [[NSMutableArray alloc]init];
     _arraySubTotal = [[NSMutableArray alloc]init];
     
-    stringSearch = [NSString stringWithFormat:@"select tbl_listamercado.supermercado, tbl_productos.ds_producto, tbl_productos.valor_un, tbl_mercado.cantidad, tbl_mercado.cantidad * tbl_productos.valor_un as subtotal from tbl_listamercado inner join tbl_mercado on tbl_listamercado.id_listamercado = tbl_mercado.idmercado inner join tbl_productos on tbl_mercado.idproducto = tbl_productos.id_producto %i", idListMarket];
+    stringSearch = [NSString stringWithFormat:@"select tbl_listamercado.supermercado, tbl_productos.ds_producto, tbl_productos.valor_un, tbl_mercado.cantidad, tbl_mercado.valor_sub from tbl_listamercado inner join tbl_mercado on tbl_listamercado.id_listamercado = tbl_mercado.idmercado inner join tbl_productos on tbl_mercado.idproducto = tbl_productos.id_producto where tbl_listamercado.id_listamercado = %i", idListMarket];
     
     if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
         const char * searchSql = [stringSearch UTF8String];
@@ -71,9 +97,11 @@ const char * dbPath;
                 
                 [_arrayProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)]];
                 
-                [_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)]];
+                [_arrayCantProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 0)]];
                 
                 [_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)]];
+                
+                [_arraySubTotal addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)]];
             }
         }
     }else{

@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     listMarket = [[Market alloc]init];
+    //Solo trae lista con id=1
     [listMarket loadMarketWithIdListMarket:1];
+    [listMarket sumValuesMarketList:1];
+    _totalMarketLabel.text = [NSString stringWithFormat:@"Total: $ %@",listMarket.totalValuesMarket];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +44,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.textLabel.text = [listMarket.arrayProduct objectAtIndex:indexPath.row];
+    
     cell.detailTextLabel.text = [listMarket.arraySubTotal objectAtIndex:indexPath.row];
     
     return cell;
