@@ -88,7 +88,7 @@ const char * dbPath;
     NSString * stringSearch;
     
     _arrayProduct = [[NSMutableArray alloc]init];
-    _arraySubTotal = [[NSMutableArray alloc]init];
+    _arrayValProduct = [[NSMutableArray alloc]init];
     
     stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_productos WHERE idcategoria = %i ORDER BY ds_producto ASC", idCategory];
     
