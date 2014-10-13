@@ -41,7 +41,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.textLabel.text = [listMarket.arrayProduct objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [listMarket.arrayValProduct objectAtIndex:indexPath.row]*
+    cell.detailTextLabel.text = [listMarket.arraySubTotal objectAtIndex:indexPath.row];
     
     return cell;
 }

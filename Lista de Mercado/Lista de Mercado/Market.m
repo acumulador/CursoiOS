@@ -59,9 +59,9 @@ const char * dbPath;
     NSString * stringSearch;
     
     _arrayProduct = [[NSMutableArray alloc]init];
-    _arrayCantProduct = [[NSMutableArray alloc]init];
+    _arraySubTotal = [[NSMutableArray alloc]init];
     
-    stringSearch = [NSString stringWithFormat:@"Qselect tbl_listamercado.supermercado, tbl_productos.ds_producto, tbl_productos.valor_un from tbl_listamercado inner join tbl_mercado on tbl_listamercado.id_listamercado = tbl_mercado.idmercado inner join tbl_productos on tbl_mercado.idproducto = tbl_productos.id_producto %i", idListMarket];
+    stringSearch = [NSString stringWithFormat:@"select tbl_listamercado.supermercado, tbl_productos.ds_producto, tbl_productos.valor_un, tbl_mercado.cantidad, tbl_mercado.cantidad * tbl_productos.valor_un as subtotal from tbl_listamercado inner join tbl_mercado on tbl_listamercado.id_listamercado = tbl_mercado.idmercado inner join tbl_productos on tbl_mercado.idproducto = tbl_productos.id_producto %i", idListMarket];
     
     if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
         const char * searchSql = [stringSearch UTF8String];
@@ -71,9 +71,9 @@ const char * dbPath;
                 
                 [_arrayProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)]];
                 
-                [_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)]];
+                [_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)]];
                 
-                [_arrayCantProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)]];
+                [_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)]];
             }
         }
     }else{
@@ -88,7 +88,7 @@ const char * dbPath;
     NSString * stringSearch;
     
     _arrayProduct = [[NSMutableArray alloc]init];
-    _arrayValProduct = [[NSMutableArray alloc]init];
+    _arraySubTotal = [[NSMutableArray alloc]init];
     
     stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_productos WHERE idcategoria = %i ORDER BY ds_producto ASC", idCategory];
     

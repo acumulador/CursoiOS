@@ -17,7 +17,7 @@
 @property NSMutableArray * arrayDsCategory;
 @property NSMutableArray * arrayProduct;
 @property NSMutableArray * arrayValProduct;
-@property NSMutableArray * arrayCantProduct;
+@property NSMutableArray * arraySubTotal;
 
 //Sobre la conexion
 //--------------------------------------------
