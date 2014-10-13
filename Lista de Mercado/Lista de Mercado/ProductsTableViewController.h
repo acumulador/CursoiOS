@@ -14,4 +14,6 @@
     Market * productsOfCategory;
 }
 
+@property NSString * dataTransfer;
+
 @end
