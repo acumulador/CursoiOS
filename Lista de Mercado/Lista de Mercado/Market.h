@@ -19,6 +19,7 @@
 @property NSMutableArray * arrayValProduct;
 @property NSMutableArray * arrayCantProduct;
 @property NSMutableArray * arraySubTotal;
+@property NSArray * arrayListMarket;
 @property NSString * totalValuesMarket;
 
 //Sobre la conexion
@@ -45,5 +46,7 @@
 
 //Sumar los valores de una lista de mercado
 -(void) sumValuesMarketList:(int) idListMarket;
+//Consulto la cantidad de listas que existen
+-(void) searchListMarket;
 
 @end

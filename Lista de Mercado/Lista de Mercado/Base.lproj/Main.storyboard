@@ -4,6 +4,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="2CF-Uo-gfN">
+            <objects>
+                <tableViewController id="LmO-a6-PLd" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="M5g-me-yAR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wNs-DN-jyP">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wNs-DN-jyP" id="peX-JG-7Xc">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LmO-a6-PLd" id="BoM-lk-trK"/>
+                            <outlet property="delegate" destination="LmO-a6-PLd" id="uyH-j9-ldA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1XZ-2s-tfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-360" y="342"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -77,7 +103,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJe-au-Ngv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="320"/>
+            <point key="canvasLocation" x="1023" y="281"/>
         </scene>
         <!--Productos-->
         <scene sceneID="W4v-hh-ICN">
@@ -121,7 +147,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQo-ye-h2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480" y="327"/>
+            <point key="canvasLocation" x="1407" y="167"/>
         </scene>
         <!--Lista de Mercado-->
         <scene sceneID="KuJ-r8-jwO">
@@ -165,14 +191,20 @@
                             <outlet property="delegate" destination="hVR-SW-Pd0" id="102-pg-zaC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lista de Mercado" id="Rab-oi-fsS"/>
+                    <navigationItem key="navigationItem" title="Lista de Mercado" id="Rab-oi-fsS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qmM-4n-jcJ">
+                            <connections>
+                                <segue destination="9su-mw-NBg" kind="push" id="8oN-wi-yJh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="totalMarketLabel" destination="eIy-6L-Jdv" id="Np4-Dz-TwU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mm2-dI-aDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1891" y="320"/>
+            <point key="canvasLocation" x="1797" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DzK-8q-Osp">
@@ -198,4 +230,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="8oN-wi-yJh"/>
+    </inferredMetricsTieBreakers>
 </document>

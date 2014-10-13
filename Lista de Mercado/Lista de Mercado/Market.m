@@ -75,6 +75,11 @@ const char * dbPath;
     }
 }
 
+-(void)searchListMarket
+{
+    
+}
+
 -(void)loadMarketWithIdListMarket:(int) idListMarket
 {
     //Cargar lista de mercado con parametro para ultima lista
@@ -104,6 +109,10 @@ const char * dbPath;
                 [_arraySubTotal addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)]];
             }
         }
+        
+        sqlite3_finalize(querySearch);
+        sqlite3_close(conexDB);
+        
     }else{
         NSLog(@"Error abriendo la base de datos!!");
     }
