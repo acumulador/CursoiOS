@@ -61,7 +61,7 @@ const char * dbPath;
     _arrayProduct = [[NSMutableArray alloc]init];
     _arrayCantProduct = [[NSMutableArray alloc]init];
     
-    stringSearch = [NSString stringWithFormat:@"Query de Jhon %i", idListMarket];
+    stringSearch = [NSString stringWithFormat:@"Qselect tbl_listamercado.supermercado, tbl_productos.ds_producto, tbl_productos.valor_un from tbl_listamercado inner join tbl_mercado on tbl_listamercado.id_listamercado = tbl_mercado.idmercado inner join tbl_productos on tbl_mercado.idproducto = tbl_productos.id_producto %i", idListMarket];
     
     if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
         const char * searchSql = [stringSearch UTF8String];
