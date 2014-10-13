@@ -17,6 +17,9 @@
 		75A2EE7319E8BF82004DB5F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A2EE7219E8BF82004DB5F3 /* Images.xcassets */; };
 		75A2EE7619E8BF82004DB5F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75A2EE7419E8BF82004DB5F3 /* LaunchScreen.xib */; };
 		75A2EE8219E8BF82004DB5F3 /* Lista_de_MercadoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EE8119E8BF82004DB5F3 /* Lista_de_MercadoTests.m */; };
+		CFB24C1519EB528400470CE1 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB24C1419EB528400470CE1 /* CategoryTableViewController.m */; };
+		CFB24C1819EB52B200470CE1 /* ProductsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB24C1719EB52B200470CE1 /* ProductsTableViewController.m */; };
+		CFB24C1B19EB52EA00470CE1 /* ListMarketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB24C1A19EB52EA00470CE1 /* ListMarketTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,12 @@
 		75A2EE7B19E8BF82004DB5F3 /* Lista de MercadoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lista de MercadoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2EE8019E8BF82004DB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A2EE8119E8BF82004DB5F3 /* Lista_de_MercadoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lista_de_MercadoTests.m; sourceTree = "<group>"; };
+		CFB24C1319EB528400470CE1 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		CFB24C1419EB528400470CE1 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		CFB24C1619EB52B200470CE1 /* ProductsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsTableViewController.h; sourceTree = "<group>"; };
+		CFB24C1719EB52B200470CE1 /* ProductsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsTableViewController.m; sourceTree = "<group>"; };
+		CFB24C1919EB52EA00470CE1 /* ListMarketTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListMarketTableViewController.h; sourceTree = "<group>"; };
+		CFB24C1A19EB52EA00470CE1 /* ListMarketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListMarketTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +111,7 @@
 		75A2EE6419E8BF81004DB5F3 /* Lista de Mercado */ = {
 			isa = PBXGroup;
 			children = (
+				CFB24C0F19EB51A100470CE1 /* views */,
 				755CC0D819EB418000CEEF69 /* class */,
 				75A2EE6919E8BF82004DB5F3 /* AppDelegate.h */,
 				75A2EE6A19E8BF82004DB5F3 /* AppDelegate.m */,
@@ -139,6 +149,19 @@
 				75A2EE8019E8BF82004DB5F3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFB24C0F19EB51A100470CE1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CFB24C1319EB528400470CE1 /* CategoryTableViewController.h */,
+				CFB24C1419EB528400470CE1 /* CategoryTableViewController.m */,
+				CFB24C1619EB52B200470CE1 /* ProductsTableViewController.h */,
+				CFB24C1719EB52B200470CE1 /* ProductsTableViewController.m */,
+				CFB24C1919EB52EA00470CE1 /* ListMarketTableViewController.h */,
+				CFB24C1A19EB52EA00470CE1 /* ListMarketTableViewController.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				75A2EE6E19E8BF82004DB5F3 /* ViewController.m in Sources */,
+				CFB24C1B19EB52EA00470CE1 /* ListMarketTableViewController.m in Sources */,
+				CFB24C1519EB528400470CE1 /* CategoryTableViewController.m in Sources */,
 				75A2EE6B19E8BF82004DB5F3 /* AppDelegate.m in Sources */,
 				755CC0E019EB4D6500CEEF69 /* ConexDB.m in Sources */,
+				CFB24C1819EB52B200470CE1 /* ProductsTableViewController.m in Sources */,
 				75A2EE6819E8BF82004DB5F3 /* main.m in Sources */,
 				755CC0DB19EB41C000CEEF69 /* Market.m in Sources */,
 			);
