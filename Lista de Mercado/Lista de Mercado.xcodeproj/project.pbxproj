@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		755CC0DB19EB41C000CEEF69 /* Market.m in Sources */ = {isa = PBXBuildFile; fileRef = 755CC0DA19EB41C000CEEF69 /* Market.m */; };
 		755CC0DD19EB4D0700CEEF69 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 755CC0DC19EB4D0700CEEF69 /* libsqlite3.dylib */; };
+		7590035419ECB6F60043A2F1 /* MarketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7590035319ECB6F60043A2F1 /* MarketTableViewController.m */; };
 		75A2EE6819E8BF82004DB5F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EE6719E8BF82004DB5F3 /* main.m */; };
 		75A2EE6B19E8BF82004DB5F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EE6A19E8BF82004DB5F3 /* AppDelegate.m */; };
 		75A2EE6E19E8BF82004DB5F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EE6D19E8BF82004DB5F3 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 		755CC0D919EB41C000CEEF69 /* Market.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Market.h; sourceTree = "<group>"; };
 		755CC0DA19EB41C000CEEF69 /* Market.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Market.m; sourceTree = "<group>"; };
 		755CC0DC19EB4D0700CEEF69 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		7590035219ECB6F60043A2F1 /* MarketTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketTableViewController.h; sourceTree = "<group>"; };
+		7590035319ECB6F60043A2F1 /* MarketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketTableViewController.m; sourceTree = "<group>"; };
 		75A2EE6219E8BF81004DB5F3 /* Lista de Mercado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lista de Mercado.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A2EE6619E8BF82004DB5F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A2EE6719E8BF82004DB5F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				CFB24C1719EB52B200470CE1 /* ProductsTableViewController.m */,
 				CFB24C1919EB52EA00470CE1 /* ListMarketTableViewController.h */,
 				CFB24C1A19EB52EA00470CE1 /* ListMarketTableViewController.m */,
+				7590035219ECB6F60043A2F1 /* MarketTableViewController.h */,
+				7590035319ECB6F60043A2F1 /* MarketTableViewController.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75A2EE6E19E8BF82004DB5F3 /* ViewController.m in Sources */,
+				7590035419ECB6F60043A2F1 /* MarketTableViewController.m in Sources */,
 				CFB24C1B19EB52EA00470CE1 /* ListMarketTableViewController.m in Sources */,
 				CFB24C1519EB528400470CE1 /* CategoryTableViewController.m in Sources */,
 				75A2EE6B19E8BF82004DB5F3 /* AppDelegate.m in Sources */,

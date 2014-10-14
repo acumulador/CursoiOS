@@ -16,12 +16,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    addMarquet = [[Market alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)createMarketListButton:(id)sender {
+    [addMarquet addListMarket:_nameSuperMarketText.text];
+    message = [[UIAlertView alloc]initWithTitle:@"Mercado"
+                                        message:addMarquet.status
+                                       delegate:self
+                              cancelButtonTitle:@"Aceptar"
+                              otherButtonTitles:nil];
+    
+    [message show];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end

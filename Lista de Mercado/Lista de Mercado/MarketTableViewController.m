@@ -1,26 +1,24 @@
 //
-//  ListMarketTableViewController.m
+//  MarketTableViewController.m
 //  Lista de Mercado
 //
-//  Created by Jhon Wilfer Orrego on 12/10/14.
+//  Created by Juan C Salazar on 13/10/14.
 //  Copyright (c) 2014 Juan C Salazar. All rights reserved.
 //
 
-#import "ListMarketTableViewController.h"
+#import "MarketTableViewController.h"
 
-@interface ListMarketTableViewController ()
+@interface MarketTableViewController ()
 
 @end
 
-@implementation ListMarketTableViewController
+@implementation MarketTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    listMarket = [[Market alloc]init];
-    //Solo trae lista con id=1
-    [listMarket loadMarketWithIdListMarket:_dataTransferIdList];
-    [listMarket sumValuesMarketList:_dataTransferIdList];
-    _totalMarketLabel.text = [NSString stringWithFormat:@"Total: $ %@",listMarket.totalValuesMarket];
+    
+    allMarkets = [[Market alloc]init];
+    [allMarkets searchListMarket];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,21 +33,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [listMarket.arrayProduct count];
+    return [allMarkets.arrayNameSuperMarketList count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-
-    cell.textLabel.text = [listMarket.arrayProduct objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellMarkets" forIndexPath:indexPath];
     
-    cell.detailTextLabel.text = [listMarket.arraySubTotal objectAtIndex:indexPath.row];
+    cell.textLabel.text = [allMarkets.arrayNameSuperMarketList objectAtIndex:indexPath.row];
+    
+    cell.detailTextLabel.text = [allMarkets.arrayFechaSuperMarketList objectAtIndex:indexPath.row];
     
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ListMarketVC = [segue destinationViewController];
+    ListMarketVC.dataTransferIdList = [self.tableView indexPathForSelectedRow].row+1;
+}
 
 /*
 // Override to support conditional editing of the table view.

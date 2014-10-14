@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Market.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIAlertViewDelegate>
+{
+    Market * addMarquet;
+    UIAlertView * message;
+}
+
+@property (strong, nonatomic) IBOutlet UITextField *nameSuperMarketText;
+- (IBAction)createMarketListButton:(id)sender;
 
 
 

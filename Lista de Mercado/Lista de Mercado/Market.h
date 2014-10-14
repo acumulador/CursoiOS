@@ -14,13 +14,17 @@
     sqlite3 * conexDB;
 }
 
+@property NSMutableArray * arrayNameSuperMarketList;
+@property NSMutableArray * arrayFechaSuperMarketList;
+
 @property NSMutableArray * arrayDsCategory;
 @property NSMutableArray * arrayProduct;
 @property NSMutableArray * arrayValProduct;
 @property NSMutableArray * arrayCantProduct;
 @property NSMutableArray * arraySubTotal;
-@property NSArray * arrayListMarket;
 @property NSString * totalValuesMarket;
+
+@property NSString * status;
 
 //Sobre la conexion
 //--------------------------------------------
@@ -42,7 +46,7 @@
 -(void) updateProductAtMarket:(NSString *) idProduct;
 -(void) compareProducts:(NSString *) idProduct;
 //Crear lista de mercado
--(void) addListMarketWithDate:(NSString *) dateList AndMarket:(NSString *) market;
+-(void) addListMarket:(NSString *) market;
 
 //Sumar los valores de una lista de mercado
 -(void) sumValuesMarketList:(int) idListMarket;

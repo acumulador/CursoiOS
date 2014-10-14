@@ -77,7 +77,65 @@ const char * dbPath;
 
 -(void)searchListMarket
 {
+    //Cargar lista de mercado con parametro para ultima lista
+    [self searchPathOfDatabase];
+    sqlite3_stmt * querySearch;
+    NSString * stringSearch;
     
+    _arrayNameSuperMarketList = [[NSMutableArray alloc]init];
+    _arrayFechaSuperMarketList = [[NSMutableArray alloc]init];
+    
+    stringSearch = [NSString stringWithFormat:@"SELECT * FROM tbl_listamercado ORDER BY id_listamercado ASC"];
+    
+    if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
+        const char * searchSql = [stringSearch UTF8String];
+        if (sqlite3_prepare_v2(conexDB, searchSql, -1, &querySearch, NULL)==SQLITE_OK) {
+            //Ciclo para todos los registro
+            while (sqlite3_step(querySearch)==SQLITE_ROW) {
+                
+                [_arrayNameSuperMarketList addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)]];
+                
+                [_arrayFechaSuperMarketList addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)]];
+            }
+        }
+        
+        sqlite3_finalize(querySearch);
+        sqlite3_close(conexDB);
+        
+    }else{
+        NSLog(@"Error al abrir la base de datos");
+    }
+}
+
+-(void)addListMarket:(NSString *)market
+{
+    [self searchPathOfDatabase];
+    sqlite3_stmt * queryInsert;
+    
+    if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
+        
+        //Tomo y formato la fecha del dispositivo
+        NSDateFormatter * dateFormat = [[NSDateFormatter alloc]init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSString *dateString=[dateFormat stringFromDate:[NSDate date]];
+        
+        NSString * stringInsert = [NSString stringWithFormat:@"INSERT INTO tbl_listamercado (fecha_mercado, valor, supermercado) VALUES (\"%@\", \"%@\", \"%@\")", dateString, @"0", market];
+        
+        const char * insertSql = [stringInsert UTF8String];
+        sqlite3_prepare_v2(conexDB, insertSql, -1, &queryInsert, NULL);
+        
+        if (sqlite3_step(queryInsert)==SQLITE_DONE) {
+            _status = @"Super Mercado creado con Exito!!";
+        } else {
+            _status = @"Error almacenando el Super Mercado!!";
+        }
+        
+        sqlite3_finalize(queryInsert);
+        sqlite3_close(conexDB);
+        
+    } else {
+        NSLog(@"Error al abrir la base de datos");
+    }
 }
 
 -(void)loadMarketWithIdListMarket:(int) idListMarket

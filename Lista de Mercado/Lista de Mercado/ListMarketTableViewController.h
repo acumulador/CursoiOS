@@ -14,6 +14,12 @@
     Market * listMarket;
 }
 
+@property int dataTransferIdList;
+
 @property (strong, nonatomic) IBOutlet UILabel *totalMarketLabel;
+@property (strong, nonatomic) IBOutlet UILabel *productDsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *cantProductoLabel;
+@property (strong, nonatomic) IBOutlet UILabel *subTotalProductLabel;
+
 
 @end
