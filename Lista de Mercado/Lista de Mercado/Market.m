@@ -160,11 +160,11 @@ const char * dbPath;
                 
                 [_arrayProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 1)]];
                 
-                [_arrayCantProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 0)]];
+                [_arrayCantProduct addObject:[NSString stringWithFormat:@"(%s)", sqlite3_column_text(querySearch, 3)]];
                 
-                [_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 3)]];
+                //[_arrayValProduct addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 2)]];
                 
-                [_arraySubTotal addObject:[NSString stringWithFormat:@"%s", sqlite3_column_text(querySearch, 4)]];
+                [_arraySubTotal addObject:[NSString stringWithFormat:@"$%s", sqlite3_column_text(querySearch, 4)]];
             }
         }
         

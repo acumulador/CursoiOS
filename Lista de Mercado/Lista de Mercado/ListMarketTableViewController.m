@@ -7,8 +7,14 @@
 //
 
 #import "ListMarketTableViewController.h"
+#import "SWTableViewCell.h"
+#import "UMTableViewCell.h"
 
 @interface ListMarketTableViewController ()
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic) BOOL useCustomCells;
+@property (nonatomic, weak) UIRefreshControl *refreshControl;
 
 @end
 
@@ -16,6 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //----------------------------------------------------------------
+    //Para Swipe de botones en Celda
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.tableView.rowHeight = 90;
+    
+    //self.navigationItem.title = @"Pull to Toggle Cell Type";
+    
+    // Setup refresh control for example app
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(toggleCells:) forControlEvents:UIControlEventValueChanged];
+    refreshControl.tintColor = [UIColor blueColor];
+    
+    [self.tableView addSubview:refreshControl];
+    self.refreshControl = refreshControl;
+    
+    // If you set the seperator inset on iOS 6 you get a NSInvalidArgumentException...weird
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+        self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0); // Makes the horizontal row seperator stretch the entire length of the table view
+    }
+    //----------------------------------------------------------------
+    
     listMarket = [[Market alloc]init];
     //Solo trae lista con id=1
     [listMarket loadMarketWithIdListMarket:_dataTransferIdList];
@@ -41,15 +68,149 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-
-    cell.textLabel.text = [listMarket.arrayProduct objectAtIndex:indexPath.row];
+    UMTableViewCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"UMCell" forIndexPath:indexPath];
+    //SWTableViewCell * cell = (SWTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"UMCell"];
     
-    cell.detailTextLabel.text = [listMarket.arraySubTotal objectAtIndex:indexPath.row];
+    /*
+    if (cell == nil) {
+        cell.rightUtilityButtons = [self rightButtons];
+        //cell.delegate = self;
+    }
+    */
+    
+    [cell setRightUtilityButtons:[self rightButtons] WithButtonWidth:58.0f];
+    cell.delegate = self;
+    
+    cell.dsProductLabel.text = [listMarket.arrayProduct objectAtIndex:indexPath.row];
+    
+    cell.cantProductLabel.text = [listMarket.arrayCantProduct objectAtIndex:indexPath.row];
+    
+    cell.subtotalProductLabel.text = [listMarket.arraySubTotal objectAtIndex:indexPath.row];
+    
+    cell.delegate = self;
     
     return cell;
 }
 
+/*
+- (NSArray *)rightButtons
+{
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
+                                                title:@"More"];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                title:@"Delete"];
+    
+    return rightUtilityButtons;
+}
+*/
+
+- (NSArray *)rightButtons
+{
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.07 green:0.75f blue:0.16f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"check.png"]];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"clock.png"]];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"cross.png"]];
+    
+    return rightUtilityButtons;
+}
+
+-(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
+{
+    switch (index) {
+        case 0:
+            NSLog(@"left button 0 Chulo");
+            break;
+        case 1:
+            NSLog(@"left button 1 0");
+            break;
+        case 2:
+            NSLog(@"left button X");
+            break;
+        case 3:
+            NSLog(@"left btton Igual");
+        case 4:
+            NSLog(@"Mi boton: Chulo!!");
+            
+        default:
+            break;
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Selecciono la celda: %@", [self.tableView indexPathForSelectedRow]);
+    
+    if (!tableView.isEditing) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
+
+- (void)toggleCells:(UIRefreshControl*)refreshControl
+{
+    [refreshControl beginRefreshing];
+    self.useCustomCells = !self.useCustomCells;
+    if (self.useCustomCells)
+    {
+        self.refreshControl.tintColor = [UIColor yellowColor];
+    }
+    else
+    {
+        self.refreshControl.tintColor = [UIColor blueColor];
+    }
+    [self.tableView reloadData];
+    [refreshControl endRefreshing];
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state
+{
+    switch (state) {
+        case 0:
+            NSLog(@"utility buttons closed");
+            break;
+        case 1:
+            NSLog(@"left utility buttons open");
+            break;
+        case 2:
+            NSLog(@"right utility buttons open");
+            break;
+        default:
+            break;
+    }
+}
+
+- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell
+{
+    // allow just one cell's utility button to be open at once
+    return YES;
+}
+
+- (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state
+{
+    switch (state) {
+        case 1:
+            // set to NO to disable all left utility buttons appearing
+            return YES;
+            break;
+        case 2:
+            // set to NO to disable all right utility buttons appearing
+            return YES;
+            break;
+        default:
+            break;
+    }
+    
+    return YES;
+}
 
 /*
 // Override to support conditional editing of the table view.

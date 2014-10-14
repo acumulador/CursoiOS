@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Market.h"
+#import "SWTableViewCell.h"
+#import "UMTableViewCell.h"
 
-@interface ListMarketTableViewController : UITableViewController
+@interface ListMarketTableViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate>
 {
     Market * listMarket;
 }
