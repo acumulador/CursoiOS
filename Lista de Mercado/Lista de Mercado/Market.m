@@ -75,6 +75,31 @@ const char * dbPath;
     }
 }
 
+-(void)addProductAtMarketWhithNameProduct:(NSString *)nameProduct AndIdMercado:(NSString *)idMercado AndValueProduct:(NSString *)subTotal AndCantProduct:(NSString *)cantProduct
+{
+    [self searchPathOfDatabase];
+    sqlite3_stmt * queryInsert;
+    
+    if (sqlite3_open(dbPath, &conexDB)==SQLITE_OK) {
+        NSString * stringInsert = [NSString stringWithFormat:@"INSERT INTO tbl_mercado (idmercado, idproducto, valor_sub,cantidad) VALUES (\"%@\", \"%@\", \"%@\", \"%@\")", idMercado,nameProduct, subTotal,cantProduct];
+        
+        const char * insertSql = [stringInsert UTF8String];
+        sqlite3_prepare_v2(conexDB, insertSql, -1, &queryInsert, NULL);
+        
+        if (sqlite3_step(queryInsert)==SQLITE_DONE) {
+            _status = @"Producto Agregado con Exito!!";
+        } else {
+            _status = @"Error almacenando el producto de Mercado!!";
+        }
+        
+        sqlite3_finalize(queryInsert);
+        sqlite3_close(conexDB);
+        
+    } else {
+        NSLog(@"Error al abrir la base de datos");
+    }
+}
+
 -(void)searchListMarket
 {
     //Cargar lista de mercado con parametro para ultima lista

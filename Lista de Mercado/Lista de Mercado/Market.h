@@ -41,7 +41,7 @@
 //-(void) loadListMarket;
 
 //Agrega producto seleccionada a la lista actual
--(void) addProductAtMarket:(NSString *) idProduct;
+-(void) addProductAtMarketWhithNameProduct:(NSString *)nameProduct AndIdMercado:(NSString *)idMercado AndValueProduct:(NSString *)subTotal AndCantProduct:(NSString *) cantProduct;
 -(void) delProductAtMarket:(NSString *) idProduct;
 -(void) updateProductAtMarket:(NSString *) idProduct;
 -(void) compareProducts:(NSString *) idProduct;

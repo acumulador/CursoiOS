@@ -9,7 +9,9 @@
 #import "ProductsTableViewController.h"
 
 @interface ProductsTableViewController ()
-
+{
+    int cantProduct;
+}
 @end
 
 @implementation ProductsTableViewController
@@ -45,6 +47,23 @@
     cell.detailTextLabel.text = [productsOfCategory.arrayValProduct objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //Metodo que Indica cuando se toca una celda
+    messageCantProduct = [[UIAlertView alloc]initWithTitle:@"Mercado" message:@"Ingrese la cantidad" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
+    messageCantProduct.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [messageCantProduct show];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    cantProduct = [[alertView textFieldAtIndex:0].text intValue];
+    [productsOfCategory addProductAtMarketWhithNameProduct:[NSString stringWithFormat:@"%ld",(long)[self.tableView indexPathForSelectedRow].row] AndIdMercado:[NSString stringWithFormat:@"%@",_dataTransfer] AndValueProduct:[NSString stringWithFormat:@"%d",cantProduct*1900] AndCantProduct:[NSString stringWithFormat:@"%d",cantProduct]];
+    
+    messageCantProduct = [[UIAlertView alloc]initWithTitle:@"Mercado" message:productsOfCategory.status delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles: nil];
+    [messageCantProduct show];
 }
 
 /*

@@ -49,7 +49,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     productsVC = [segue destinationViewController];
-    productsVC.dataTransfer = [NSString stringWithFormat:@"%i",[self.tableView indexPathForSelectedRow].row];
+    productsVC.dataTransfer = [NSString stringWithFormat:@"%li",(long)[self.tableView indexPathForSelectedRow].row];
 }
 
 /*

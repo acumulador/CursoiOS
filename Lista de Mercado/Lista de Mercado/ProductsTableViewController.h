@@ -10,10 +10,11 @@
 #import "ListMarketTableViewController.h"
 #import "Market.h"
 
-@interface ProductsTableViewController : UITableViewController
+@interface ProductsTableViewController : UITableViewController<UIAlertViewDelegate>
 {
     Market * productsOfCategory;
     ListMarketTableViewController * listMarketVC;
+    UIAlertView * messageCantProduct;
 }
 
 @property NSString * dataTransfer;
