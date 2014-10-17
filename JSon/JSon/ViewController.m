@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL * url = [NSURL URLWithString:@"http://54.207.107.65/cluster/"];
+    NSURL * url = [NSURL URLWithString:@"http://54.207.107.65/cluster/?id=1"];
     
     dispatch_async(kQueue, ^{
         [self performSelectorOnMainThread:@selector(printJSONData:) withObject:[NSData dataWithContentsOfURL:url] waitUntilDone:YES];
@@ -31,6 +31,23 @@
 {
     [_animationProcess stopAnimating];
     _animationProcess.hidden = YES;
+    
+    NSError * error;
+    
+    NSDictionary * json = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    
+    NSLog(@"%@", json);
+    
+    NSArray * registros = [json objectForKey:@"registros"];
+    NSDictionary * registro1 = [registros objectAtIndex:0];
+    
+    NSLog(@"Registro 1: %@", registro1);
+    
+    _nameLabel.text = [registro1 objectForKey:@"usuario"];
+    _jobLabel.text = [registro1 objectForKey:@"prefesion"];
+    _dateLabel.text = [registro1 objectForKey:@"fecha"];
+    _paswordLabel.text = [registro1 objectForKey:@"contrasena"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
