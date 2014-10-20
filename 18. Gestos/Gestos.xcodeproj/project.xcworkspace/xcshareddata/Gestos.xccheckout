@@ -5,20 +5,28 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E0C2661F-6201-4D4D-A7C6-24E8E60F08FA</string>
+	<string>029AC657-4A54-4521-A8BB-94DEF9D7ADB2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Gestos</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>16B3F7F648EF20BE793F953DAB8C082EEA49B6F4</key>
+		<string>https://github.com/MultimediaLab/Cluster-Medellin-Grupo-4.git</string>
 		<key>31A99065874FD03917572266FC3310193FB4A48D</key>
 		<string>https://github.com/acumulador/CursoiOS.git</string>
+		<key>3ED52BD9018A137EF9EEF7BEAC24058354B618F7</key>
+		<string>https://github.com/MultimediaLab/Cluster-Medellin.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Gestos/Gestos.xcodeproj</string>
+	<string>18. Gestos/Gestos.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>16B3F7F648EF20BE793F953DAB8C082EEA49B6F4</key>
+		<string>../../../../Cluster-Medellin-Grupo-4</string>
 		<key>31A99065874FD03917572266FC3310193FB4A48D</key>
 		<string>../../..</string>
+		<key>3ED52BD9018A137EF9EEF7BEAC24058354B618F7</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/acumulador/CursoiOS.git</string>
@@ -28,6 +36,22 @@
 	<string>31A99065874FD03917572266FC3310193FB4A48D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3ED52BD9018A137EF9EEF7BEAC24058354B618F7</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>16B3F7F648EF20BE793F953DAB8C082EEA49B6F4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cluster-Medellin-Grupo-4</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

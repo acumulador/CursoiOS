@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75026C5C19F1EECB00784445"
+               BlueprintIdentifier = "F8BF02D719F1EE5200379E07"
                BuildableName = "Gestos.app"
                BlueprintName = "Gestos"
                ReferencedContainer = "container:Gestos.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75026C7519F1EECB00784445"
+               BlueprintIdentifier = "F8BF02F019F1EE5200379E07"
                BuildableName = "GestosTests.xctest"
                BlueprintName = "GestosTests"
                ReferencedContainer = "container:Gestos.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75026C7519F1EECB00784445"
+               BlueprintIdentifier = "F8BF02F019F1EE5200379E07"
                BuildableName = "GestosTests.xctest"
                BlueprintName = "GestosTests"
                ReferencedContainer = "container:Gestos.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75026C5C19F1EECB00784445"
+            BlueprintIdentifier = "F8BF02D719F1EE5200379E07"
             BuildableName = "Gestos.app"
             BlueprintName = "Gestos"
             ReferencedContainer = "container:Gestos.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75026C5C19F1EECB00784445"
+            BlueprintIdentifier = "F8BF02D719F1EE5200379E07"
             BuildableName = "Gestos.app"
             BlueprintName = "Gestos"
             ReferencedContainer = "container:Gestos.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75026C5C19F1EECB00784445"
+            BlueprintIdentifier = "F8BF02D719F1EE5200379E07"
             BuildableName = "Gestos.app"
             BlueprintName = "Gestos"
             ReferencedContainer = "container:Gestos.xcodeproj">
