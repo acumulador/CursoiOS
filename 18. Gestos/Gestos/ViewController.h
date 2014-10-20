@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *panGesture;
 - (IBAction)handlePan:(id)sender;
 
+- (IBAction)programarDesayuno:(id)sender;
 
 
 

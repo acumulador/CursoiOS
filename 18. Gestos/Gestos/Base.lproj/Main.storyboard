@@ -19,6 +19,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monkey_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="AXR-UI-dM9">
                                 <rect key="frame" x="90" y="392" width="140" height="168"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ro3-hW-g7U">
+                                <rect key="frame" x="168" y="28" width="136" height="30"/>
+                                <state key="normal" title="Recordar Desayuno">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="programarDesayuno:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dYe-QT-aG9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>

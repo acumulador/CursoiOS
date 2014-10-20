@@ -75,9 +75,15 @@
     
 }
 
-
-
-
-
+- (IBAction)programarDesayuno:(id)sender {
+    UILocalNotification * desyuno = [[UILocalNotification alloc]init];
+    
+    desyuno.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
+    desyuno.alertBody = @"Recuerda el desayuno del Mico!!";
+    desyuno.timeZone = [NSTimeZone defaultTimeZone];
+    desyuno.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber]+1;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:desyuno];
+}
 
 @end
